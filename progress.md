@@ -19,7 +19,7 @@
 - [x] Wipe toàn bộ project cũ (chỉ Tiki) khỏi nhánh `main`.
 - [x] `progress.md` khởi tạo.
 - [x] **Phase 0 — Foundation (core/, models/, registry, base crawler, tests). 36/36 tests pass.**
-- [ ] Phase 1 — Tiki crawler (di chuyển từ project cũ).
+- [x] **Phase 1 — Tiki crawler + pipelines + CLI. 58 tests pass, smoke OK against live site.**
 - [ ] Phase 2 — Shopee crawler.
 - [ ] Phase 3 — Lazada crawler.
 - [ ] Phase 4 — Sendo crawler.
@@ -89,6 +89,56 @@ Chi tiết xem `test_turtorial.md`.
 
 ### Bước tiếp theo
 - Phase 1: port crawler cũ của Tiki vào `crawlers/tiki/`, dùng HttpClient + BaseCrawler mới; test pipeline `full` với 1 danh mục nhỏ.
+
+---
+
+## 2026-07-27 — Phase 1 (Tiki) hoàn thành
+
+### Làm được
+- `crawlers/tiki/`:
+  - `menu_seed.py` — curated seed 19 danh mục phổ biến (Tiki đã bỏ public JSON menu API nên seed là fallback Phase 1; sẽ bổ sung Playwright scraper ở Phase 2+).
+  - `menu_parser.py` — `parse_seed()` + `parse_menu_html()` từ `__NEXT_DATA__`.
+  - `product_parser.py` — parse HTML lấy sản phẩm; **URL normalization** (absolute / `/x` / `x` / `//x`) để chịu được 3 dạng URL Tiki phát ra.
+  - `comment_parser.py` — walk blob tìm review arrays, coerce rating về 1-5.
+  - `keyword_parser.py` — alias cho search parser.
+  - `tiki_crawler.py` — `TikiCrawler(BaseCrawler)`, đăng ký với `@register(Platform.TIKI)`.
+- `pipelines/`:
+  - `menu_pipeline.py` — `run_menu_pipeline(platform, output_dir, level)`.
+  - `products_from_menu_pipeline.py` — đọc CSV/JSONL menu, crawl products per category.
+  - `comments_from_products_pipeline.py` — đọc CSV products, crawl comments per product (bỏ qua nếu `crawler.supports_comments() == False`).
+  - `keyword_pipeline.py` — search + top products + comments (tuỳ chọn).
+  - `full_pipeline.py` — nối 3 pipeline trên (menu → products → comments).
+- `main.py` — CLI argparse với `--mode / --platform / --platforms / --output-dir / --input-file / --keywords / --limit / --max-pages / --no-comments / --max-products-per-keyword / --level`.
+- `services/platform_registry.py` — auto-import `crawlers` package để tự động populate registry khi `main.py` chạy.
+- Tests mới:
+  - `tests/test_tiki_parsers.py` — 22 tests: menu parser (5), product parser (9 — gồm URL normalization), comment parser (5), registry (1), search alias (1).
+  - `tests/smoke/test_tiki_smoke.py` — 2 tests, skip nếu không có `RUN_NETWORK_TESTS=1`.
+- `test_turtorial.md` — bổ sung mục Phase 1 (CLI examples, smoke real-network).
+
+### Còn vướng
+- Tiki public menu API đã hết (404). Phase 2 cần Playwright DOM scrape để có tree đầy đủ — seed hiện tại chỉ 19 categories.
+- Tiki search page trả HTML — comment parser chưa từng chạy trên trang thật (chỉ test trên fixture). Smoke test `keyword` không gọi `fetch_comments` (để smoke nhanh).
+- Tiki search pagination thực tế dùng JS; crawler hiện gắn `?page=N` nhưng có thể không có tác dụng. Phase 5 sẽ bổ sung.
+
+### Bug đã fix trong lúc làm
+- `comment_parser` để `product_id` rỗng → pydantic ValidationError → comment bị rớt. Fix: parser nhận `default_product_id`, chỉ build Comment khi có pid.
+- `comment_parser` không coerce rating ngoài khoảng 1-5. Fix: `_coerce_int` trả về `None` ngoài khoảng; test cập nhật để phản ánh hành vi.
+- `product_parser` không xử lý URL bare-relative (Tiki phát `apple-iphone-17-p123.html` không có `/`). Fix: `_normalize_url()` cover 4 dạng URL.
+- `main.py` không import `crawlers` package → registry rỗng. Fix: import `crawlers` + `crawlers.tiki` trong `main.py` và `services/platform_registry.py` (defensive).
+
+### Kết quả test
+```
+58 passed, 2 skipped in 1.44s
+```
+- Phase 0 cũ: 36 tests (models, storage, retry, rate-limiter, registry, settings).
+- Phase 1 mới: 22 tests (Tiki parsers + registration).
+
+### Smoke test thực tế
+- `python main.py --mode menu --platform tiki` → 19 categories → `outputs/tiki_menu_<run_id>/{menu_*.csv, raw/menu_*.jsonl, crawler.db}`.
+- `python main.py --mode keyword --platform tiki --keywords "iphone" --no-comments` → 10 products từ trang search Tiki thật → `outputs/tiki_keyword_<run_id>/{keyword_iphone_top_*.csv, raw/keyword_iphone_top_*.jsonl, crawler.db}`.
+
+### Bước tiếp theo
+- Phase 2: crawler Shopee. Đề xuất dùng public API `shopee.vn/api/v4/search/search` trước; nếu không khả thi thì Playwright.
 
 ---
 

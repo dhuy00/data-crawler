@@ -14,6 +14,15 @@ from models.platform import Platform
 if TYPE_CHECKING:
     from crawlers.base import BaseCrawler
 
+# Importing the crawlers package triggers each per-platform module's
+# `@register(...)` decorator, populating the registry singleton. This is a
+# no-op if no crawler module is present (e.g. during unit tests that
+# register fakes explicitly).
+try:
+    import crawlers  # noqa: F401
+except ImportError:
+    pass
+
 
 class PlatformRegistry:
     """Thread-safe registry mapping `Platform` -> `BaseCrawler` subclass."""

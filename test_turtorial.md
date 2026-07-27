@@ -14,7 +14,7 @@ File này hướng dẫn cài đặt môi trường, chạy toàn bộ test, ch�
 
 ### 1.2 Tạo virtualenv & cài dependencies
 
-```powershell
+```powershellD:\temp\data-crawler\data-crawler
 cd <repo-root>          # thư mục data-crawler
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install --upgrade pip
@@ -275,4 +275,80 @@ Sau khi sửa code, trước khi commit:
 .venv\Scripts\python.exe -m pytest -v
 ```
 
-Nếu **36 passed** → an toàn commit. Nếu có fail → fix trước, không commit code đỏ.
+Nếu **58 passed, 2 skipped** (network smoke) → an toàn commit. Nếu có fail → fix trước, không commit code đỏ.
+
+---
+
+## 8. Phase 1 — Chạy CLI thực tế (Tiki)
+
+Tất cả ví dụ dưới đây chạm mạng thật — chỉ chạy khi bạn muốn test crawler end-to-end.
+
+### 8.1 Xem menu các danh mục Tiki
+
+```powershell
+.venv\Scripts\python.exe main.py --mode menu --platform tiki --output-dir outputs/test_menu
+```
+
+Kết quả:
+- `outputs/test_menu/tiki_menu_<run_id>/menu_<run_id>.csv` — 19 danh mục.
+- `outputs/test_menu/tiki_menu_<run_id>/raw/menu_<run_id>.jsonl` — JSON Lines.
+- `outputs/test_menu/tiki_menu_<run_id>/crawler.db` — SQLite normalized.
+
+Đọc nhanh:
+```powershell
+Get-Content outputs/test_menu/tiki_menu_<run_id>\menu_*.csv | Select-Object -First 5
+```
+
+### 8.2 Search theo từ khoá (không lấy comment để smoke nhanh)
+
+```powershell
+.venv\Scripts\python.exe main.py --mode keyword --platform tiki --keywords "iphone,airpods" --no-comments
+```
+
+Mong đợi: `keyword_iphone_top_*.csv`, `keyword_airpods_top_*.csv` trong `outputs/tiki_keyword_<run_id>/`.
+
+### 8.3 Pipeline đầy đủ: menu → products → comments
+
+```powershell
+.venv\Scripts\python.exe main.py --mode full --platform tiki --limit 3
+```
+
+- Bước 1: ghi menu CSV (~19 categories).
+- Bước 2: crawl 3 categories đầu tiên, ghi products CSV.
+- Bước 3: với mỗi product, crawl trang chi tiết để lấy comments.
+
+Có thể chậm (5–60 giây tuỳ network). Để smoke nhanh hơn, thêm `--no-comments`.
+
+### 8.4 Đọc lại dữ liệu đã crawl
+
+```powershell
+.venv\Scripts\python.exe -c "
+import sqlite3, glob
+db = sorted(glob.glob('outputs/tiki_products_*/crawler.db'))[-1]
+conn = sqlite3.connect(db)
+print(conn.execute('SELECT platform, COUNT(*) FROM products').fetchall())
+print(conn.execute('SELECT name, price FROM products LIMIT 3').fetchall())
+"
+```
+
+### 8.5 Smoke test có network
+
+Chạy test smoke đã viết sẵn (skip nếu không set `RUN_NETWORK_TESTS=1`):
+
+```powershell
+$env:RUN_NETWORK_TESTS = "1"
+.venv\Scripts\python.exe -m pytest tests/smoke -v
+$env:RUN_NETWORK_TESTS = "0"   # tắt lại
+```
+
+---
+
+## 9. Lỗi hay gặp và cách xử lý (Phase 1+)
+
+| Lỗi | Nguyên nhân | Cách xử lý |
+|---|---|---|
+| `LookupError: No crawler registered for platform 'tiki'. Known: []` | `main.py` không import `crawlers.tiki` (đã fix tự động) | Đảm bảo chạy `python` từ repo root. |
+| `pydantic_core.ValidationError ... Invalid URL` | Tiki trả URL dạng relative | Commit mới nhất có `_normalize_url` xử lý 4 dạng URL. |
+| Comment parser trả list rỗng trên trang product thật | Tiki embed reviews ở key lạ | Parser tự walk blob; nếu vẫn rỗng, log lại HTML và issue. |
+| Pipeline `full` chậm / treo | Mỗi request parse HTML lớn | Giảm `--limit 3`, tăng `--max-pages 1`, hoặc `--no-comments`. |
+| `Permission denied` khi ghi `outputs/` | Windows file lock do antivirus | Đổi `--output-dir` sang thư mục khác. |
