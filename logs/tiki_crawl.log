@@ -1347,3 +1347,83 @@ Browser logs:
 2026-07-20 17:11:24 | INFO     | core.storage:export_dataframe:58 - Exported 1270 rows to D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\tiki_menu_3_levels.csv
 2026-07-20 17:11:24 | INFO     | services.category_service:save_categories:70 - Categories saved: {'csv': 'D:\\XX\\Downloads\\Demo\\tiki-comment-crawler-main\\outputs\\tiki_menu_3_levels.csv'}
 2026-07-20 17:11:24 | INFO     | pipelines.menu_pipeline:menu_pipeline:35 - Menu pipeline completed. Total categories: 1270
+2026-07-27 22:11:05 | INFO     | __main__:main:96 - Running mode: menu
+2026-07-27 22:11:05 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-27 22:11:05 | INFO     | core.browser:launch:31 - Launching Playwright browser (headless=False)
+2026-07-27 22:11:07 | INFO     | core.browser:close:143 - Browser cleanup completed
+2026-07-27 22:11:07 | INFO     | crawlers.menu_crawler:close:58 - Menu crawler closed
+2026-07-27 22:11:07 | ERROR    | __main__:main:137 - Pipeline failed: BrowserType.launch: Executable doesn't exist at C:\Users\HUY\AppData\Local\ms-playwright\chromium-1228\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-07-27 22:12:14 | INFO     | __main__:main:96 - Running mode: menu
+2026-07-27 22:12:14 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-27 22:12:14 | INFO     | core.browser:launch:31 - Launching Playwright browser (headless=True)
+2026-07-27 22:12:15 | INFO     | core.browser:launch:42 - Browser launched successfully
+2026-07-27 22:12:15 | INFO     | crawlers.menu_crawler:initialize:50 - Menu crawler initialized
+2026-07-27 22:12:15 | INFO     | crawlers.menu_crawler:crawl_level_1:160 - Starting level 1 category crawl
+2026-07-27 22:12:19 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/
+2026-07-27 22:12:19 | INFO     | crawlers.menu_crawler:crawl_level_1:175 - Found 30 raw level 1 category elements
+2026-07-27 22:12:20 | INFO     | crawlers.menu_crawler:crawl_level_1:206 - Extracted 26 valid level 1 categories
+2026-07-27 22:12:20 | INFO     | crawlers.menu_crawler:crawl_level_2_3:221 - Starting level 2/3 crawl for 26 level 1 categories
+2026-07-27 22:13:35 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/phu-kien-thoi-trang/c27498
+2026-07-27 22:13:40 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/ngon/c44792
+2026-07-27 22:13:46 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dong-ho-va-trang-suc/c8371
+2026-07-27 22:13:50 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/balo-va-vali/c6000
+2026-07-27 22:13:56 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/voucher-dich-vu/c11312
+2026-07-27 22:14:32 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/tui-vi-nu/c976
+2026-07-27 22:14:38 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/tui-thoi-trang-nam/c27616
+2026-07-27 22:14:44 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/cham-soc-nha-cua/c15078
+2026-07-27 22:14:48 | INFO     | crawlers.menu_crawler:crawl:388 - Menu crawl completed. Total categories: 1180
+2026-07-27 22:15:02 | INFO     | __main__:main:96 - Running mode: menu
+2026-07-27 22:15:02 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-27 22:15:02 | INFO     | core.browser:launch:31 - Launching Playwright browser (headless=False)
+2026-07-27 22:15:03 | INFO     | core.browser:launch:42 - Browser launched successfully
+2026-07-27 22:15:03 | INFO     | crawlers.menu_crawler:initialize:50 - Menu crawler initialized
+2026-07-27 22:15:03 | INFO     | crawlers.menu_crawler:crawl_level_1:160 - Starting level 1 category crawl
+2026-07-27 22:15:04 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/
+2026-07-27 22:15:05 | INFO     | crawlers.menu_crawler:crawl_level_1:175 - Found 30 raw level 1 category elements
+2026-07-27 22:15:06 | INFO     | crawlers.menu_crawler:crawl_level_1:206 - Extracted 26 valid level 1 categories
+2026-07-27 22:15:06 | INFO     | crawlers.menu_crawler:crawl_level_2_3:221 - Starting level 2/3 crawl for 26 level 1 categories
+2026-07-27 22:15:10 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/nha-sach-tiki/c8322
+2026-07-27 22:15:16 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/nha-cua-doi-song/c1883
+2026-07-27 22:15:22 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dien-thoai-may-tinh-bang/c1789
+2026-07-27 22:15:27 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/do-choi-me-be/c2549
+2026-07-27 22:15:33 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thiet-bi-kts-phu-kien-so/c1815
+2026-07-27 22:15:38 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dien-gia-dung/c1882
+2026-07-27 22:15:44 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/lam-dep-suc-khoe/c1520
+2026-07-27 22:15:50 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/o-to-xe-may-xe-dap/c8594
+2026-07-27 22:15:56 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thoi-trang-nu/c931
+2026-07-27 22:16:03 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/bach-hoa-online/c4384
+2026-07-27 22:16:14 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/the-thao-da-ngoai/c1975
+2026-07-27 22:16:20 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thoi-trang-nam/c915
+2026-07-27 22:16:25 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/cross-border-hang-quoc-te/c17166
+2026-07-27 22:16:46 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/laptop-may-vi-tinh-linh-kien/c1846
+2026-07-27 22:16:54 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/giay-dep-nam/c1686
+2026-07-27 22:17:00 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dien-tu-dien-lanh/c4221
+2026-07-27 22:17:06 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/giay-dep-nu/c1703
+2026-07-27 22:17:10 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/may-anh/c1801
+2026-07-27 22:17:17 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/phu-kien-thoi-trang/c27498
+2026-07-27 22:17:22 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/ngon/c44792
+2026-07-27 22:17:28 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dong-ho-va-trang-suc/c8371
+2026-07-27 22:17:33 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/balo-va-vali/c6000
+2026-07-27 22:17:38 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/voucher-dich-vu/c11312
+2026-07-27 22:18:13 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/tui-vi-nu/c976
+2026-07-27 22:18:18 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/tui-thoi-trang-nam/c27616
+2026-07-27 22:18:24 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/cham-soc-nha-cua/c15078
+2026-07-27 22:18:26 | INFO     | crawlers.menu_crawler:crawl:388 - Menu crawl completed. Total categories: 489
+2026-07-27 22:18:27 | INFO     | core.browser:close:143 - Browser cleanup completed
+2026-07-27 22:18:27 | INFO     | crawlers.menu_crawler:close:58 - Menu crawler closed
+2026-07-27 22:18:27 | INFO     | services.category_service:deduplicate_categories:118 - Deduplicating 489 categories
+2026-07-27 22:18:27 | INFO     | services.category_service:deduplicate_categories:136 - Unique categories: 489 (removed 0 duplicates)
+2026-07-27 22:18:27 | INFO     | services.category_service:save_categories:59 - Saving 489 unique categories
+2026-07-27 22:18:27 | INFO     | services.category_service:categories_to_dataframe:26 - Converting 489 categories to DataFrame
+2026-07-27 22:18:27 | INFO     | services.category_service:categories_to_dataframe:31 - Created DataFrame with shape: (489, 8)
+2026-07-27 22:18:27 | INFO     | core.storage:export_dataframe:58 - Exported 489 rows to D:\temp\data-crawler\data-crawler\outputs\tiki_menu_3_levels.csv
+2026-07-27 22:18:27 | INFO     | services.category_service:save_categories:70 - Categories saved: {'csv': 'D:\\temp\\data-crawler\\data-crawler\\outputs\\tiki_menu_3_levels.csv'}
+2026-07-27 22:18:27 | INFO     | pipelines.menu_pipeline:menu_pipeline:35 - Menu pipeline completed. Total categories: 489
