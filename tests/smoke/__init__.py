@@ -1,0 +1,1 @@
+"""Smoke tests package — guarded behind RUN_NETWORK_TESTS=1."""
