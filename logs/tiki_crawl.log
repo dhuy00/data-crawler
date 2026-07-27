@@ -1,0 +1,1349 @@
+2026-07-20 15:45:05 | INFO     | __main__:main:39 - Starting keyword pipeline with keywords: ['Iphone']
+2026-07-20 15:45:05 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:20 - Starting keyword pipeline for keywords: ['Iphone']
+2026-07-20 15:45:05 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:24 - Step 1: Searching products by keywords...
+2026-07-20 15:45:05 | INFO     | crawlers.keyword_crawler:search_keywords:183 - Starting keyword search for 1 keywords
+2026-07-20 15:45:05 | INFO     | crawlers.keyword_crawler:search_keyword:123 - Searching for keyword: Iphone
+2026-07-20 15:45:08 | INFO     | crawlers.keyword_crawler:search_keyword:170 - Keyword 'Iphone': 40 products
+2026-07-20 15:45:08 | INFO     | crawlers.keyword_crawler:search_keywords:204 - Keyword search completed. Total unique products: 40
+2026-07-20 15:45:08 | INFO     | crawlers.keyword_crawler:close:210 - Keyword crawler closed
+2026-07-20 15:45:08 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:28 - Found 40 products
+2026-07-20 15:45:08 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:31 - Step 2: Deduplicating products...
+2026-07-20 15:45:08 | INFO     | services.product_service:deduplicate_products:107 - Deduplicating 40 products
+2026-07-20 15:45:08 | INFO     | services.product_service:deduplicate_products:120 - Unique products: 40 (removed 0)
+2026-07-20 15:45:08 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:33 - After dedup: 40 unique products
+2026-07-20 15:45:08 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:45 - Step 3: Ranking products...
+2026-07-20 15:45:08 | INFO     | services.ranking_service:rank_products:88 - Ranking 40 products
+2026-07-20 15:45:08 | INFO     | services.ranking_service:rank_products:114 - Ranking completed. Top product score: 41.18
+2026-07-20 15:45:08 | INFO     | services.ranking_service:get_top_n:134 - Selected top 40 from 40 products
+2026-07-20 15:45:08 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:48 - Selected top 40 products
+2026-07-20 15:45:08 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:51 - Step 4: Extracting comments with strict validation...
+2026-07-20 15:45:08 | INFO     | crawlers.comment_crawler:crawl_products:334 - Starting comment crawl for 40 products
+2026-07-20 15:45:08 | INFO     | crawlers.comment_crawler:crawl_products:342 - Found 24 products with reviews
+2026-07-20 15:45:08 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Apple iPhone 17 Pro Max (ID: 278628866, Expected: 63)
+2026-07-20 15:45:16 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 278628866: 57 reviews
+2026-07-20 15:45:16 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Apple iPhone 17 Pro (ID: 278628812, Expected: 26)
+2026-07-20 15:45:20 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 278628812: 23 reviews
+2026-07-20 15:45:20 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Apple iPhone 17 - Xanh lam khói - 256GB (ID: 278630241, Expected: 17)
+2026-07-20 15:45:21 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 278630241: 17 reviews
+2026-07-20 15:45:21 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Apple iPhone Air - Xanh Da Trời - 256GB (ID: 278630285, Expected: 11)
+2026-07-20 15:45:23 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 278630285: 11 reviews
+2026-07-20 15:45:23 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Apple iPhone 17e (ID: 279204182, Expected: 3)
+2026-07-20 15:45:24 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 279204182: 3 reviews
+2026-07-20 15:45:24 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Tai nghe điện thoại Iphone cổng Lightning, dùng cho từ iphone 7 đến iphone 14 pro max - Hàng chính hãng (ID: 279142338, Expected: 1)
+2026-07-20 15:45:25 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 279142338: 1 reviews
+2026-07-20 15:45:25 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for BAO DA ĐEO LƯNG IPHONE SE 2020 - CHÍNH HÃNG KHẮC TÊN (ID: 54386258, Expected: 1)
+2026-07-20 15:45:26 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 54386258: 1 reviews
+2026-07-20 15:45:26 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp lưng cho iPhone X/Xs, iPhone Xr, iPhone Xs Max, iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max, dẻo trong chống sốc cao cấp - Hàng chính hãng (ID: 275678806, Expected: 1)
+2026-07-20 15:45:28 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 275678806: 1 reviews
+2026-07-20 15:45:28 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Kính Cường Lực Cho Iphone XS Max - Hàng Chính Hãng (ID: 46713600, Expected: 1)
+2026-07-20 15:45:29 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 46713600: 1 reviews
+2026-07-20 15:45:29 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp lưng cho iPhone 5/5s, iPhone 6/6s, iPhone 7, iPhone 7 Plus, iPhone 8/ iPhone SE, iPhone 8 Plus dẻo trong chống sốc cao cấp - Hàng chính hãng (ID: 275678601, Expected: 1)
+2026-07-20 15:45:31 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 275678601: 1 reviews
+2026-07-20 15:45:31 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Cường lực Earldom chống vân tay, chống trầy xước cho iPhone 12 ProMax - Hàng Chính Hãng (ID: 110813222, Expected: 1)
+2026-07-20 15:45:33 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 110813222: 2 reviews
+2026-07-20 15:45:33 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for BAO DA CẦM TAY IPHONE SE 2020 - CHÍNH HÃNG KHẮC TÊN (ID: 54345390, Expected: 1)
+2026-07-20 15:45:33 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 54345390: 1 reviews
+2026-07-20 15:45:33 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for VÍ DA ĐIỆN THOẠI IPHONE 12 PRO MAX - CHÍNH HÃNG KHACTEN.COM (ID: 73326114, Expected: 4)
+2026-07-20 15:45:35 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 73326114: 4 reviews
+2026-07-20 15:45:35 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp lưng cao cấp dành cho iPhone 7 / 8 / SE 2020 / 7 Plus / 8 Plus / X / XS / XS Max / XR / 11 / 11 Pro / 11 Pro Max (ID: 81224454, Expected: 16)
+2026-07-20 15:45:37 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 81224454: 16 reviews
+2026-07-20 15:45:37 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp lưng lụa nhám siêu mỏng chống vân tay cho iPhone 7, iPhone 8 Chính Hãng HOCO - Hàng Nhập Khẩu (ID: 74952676, Expected: 11)
+2026-07-20 15:45:38 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 74952676: 10 reviews
+2026-07-20 15:45:38 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp Lưng Trong Suốt Hoco Dành Cho iPhone - Hàng Chính Hãng (ID: 135410778, Expected: 100)
+2026-07-20 15:45:49 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 135410778: 105 reviews
+2026-07-20 15:45:49 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp lưng da kính cao cấp dành cho iPhone X / iPhone XS - Màu đỏ - Hàng nhập khẩu - DELICATE (ID: 43395874, Expected: 13)
+2026-07-20 15:45:50 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 43395874: 13 reviews
+2026-07-20 15:45:50 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp lưng dẻo dành cho iPhone XS / iPhone X Ultra Thin (mỏng 0.3mm, Trong suốt) - Hàng chính hãng (ID: 5418113, Expected: 17)
+2026-07-20 15:45:55 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 5418113: 19 reviews
+2026-07-20 15:45:55 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp lưng dẻo mỏng dành cho iPhone 11 - Màu đen (ID: 47272512, Expected: 4)
+2026-07-20 15:46:02 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 47272512: 57 reviews
+2026-07-20 15:46:02 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ví Da Leather Wallet Hít Từ Tính Kai Dành Cho Các Dòng iPhone- Hàng chính hãng (ID: 193974171, Expected: 19)
+2026-07-20 15:46:04 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 193974171: 20 reviews
+2026-07-20 15:46:04 | INFO     | crawlers.comment_crawler:crawl_products:358 - Checkpoint at product 20: 363 comments total
+2026-07-20 15:46:04 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp lưng cho Iphone 11 - 01240 - Ốp dẻo trong - Hàng Chính Hãng (ID: 50702432, Expected: 12)
+2026-07-20 15:46:08 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 50702432: 32 reviews
+2026-07-20 15:46:08 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Bao da bò non dạng ví hãng Greencase dành cho iPhone 7/8/SE 2020, iPhone 7 Plus/8 Plus - Hàng chính hãng (ID: 103759180, Expected: 27)
+2026-07-20 15:46:12 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 103759180: 31 reviews
+2026-07-20 15:46:12 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for DÁN DA IPHONE SE 2020 - CHÍNH HÃNG KHẮC TÊN (ID: 54566592, Expected: 1)
+2026-07-20 15:46:13 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 54566592: 1 reviews
+2026-07-20 15:46:13 | INFO     | crawlers.comment_crawler:crawl_product:272 - Crawling reviews for Ốp lưng Usams siêu mỏng khoét từng camera dành cho iPhone 13 - Hàng chính hãng (ID: 169935262, Expected: 1)
+2026-07-20 15:46:15 | INFO     | crawlers.comment_crawler:crawl_product:321 - Product 169935262: 2 reviews
+2026-07-20 15:46:15 | INFO     | crawlers.comment_crawler:crawl_products:364 - Comment crawl completed. Total comments: 429
+2026-07-20 15:46:15 | INFO     | core.comment_validator:get_comment_quality_report:251 - Comment Quality Report: 429/448 valid (95.8%)
+2026-07-20 15:46:15 | INFO     | crawlers.comment_crawler:close:378 - Comment crawler closed
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:55 - Crawled 429 comments
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:58 - Step 5: Validating and deduplicating comments...
+2026-07-20 15:46:15 | INFO     | services.comment_service:validate_comments:86 - Validating 429 comments
+2026-07-20 15:46:15 | INFO     | services.comment_service:validate_comments:115 - Validation complete: 146 valid, 283 filtered
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:60 - After validation: 146 valid comments
+2026-07-20 15:46:15 | INFO     | services.comment_service:deduplicate_comments:135 - Deduplicating 146 comments
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:63 - After dedup: 146 unique valid comments
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:66 - Step 6: Saving results...
+2026-07-20 15:46:15 | INFO     | services.product_service:save_products:57 - Saving 40 products
+2026-07-20 15:46:15 | INFO     | services.product_service:products_to_dataframe:27 - Converting 40 products to DataFrame
+2026-07-20 15:46:15 | INFO     | services.product_service:products_to_dataframe:32 - Created DataFrame with shape: (40, 26)
+2026-07-20 15:46:15 | INFO     | core.storage:export_dataframe:58 - Exported 40 rows to D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\keyword_top_Iphone.csv
+2026-07-20 15:46:15 | INFO     | services.product_service:save_products:68 - Products saved: {'csv': 'D:\\XX\\Downloads\\Demo\\tiki-comment-crawler-main\\outputs\\keyword_top_Iphone.csv'}
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:74 - Products saved
+2026-07-20 15:46:15 | INFO     | services.comment_service:save_comments:59 - Saving 146 comments
+2026-07-20 15:46:15 | INFO     | services.comment_service:comments_to_dataframe:29 - Converting 146 comments to DataFrame
+2026-07-20 15:46:15 | INFO     | services.comment_service:comments_to_dataframe:34 - Created DataFrame with shape: (146, 31)
+2026-07-20 15:46:15 | INFO     | core.storage:export_dataframe:58 - Exported 146 rows to D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\keyword_comments_Iphone.csv
+2026-07-20 15:46:15 | INFO     | services.comment_service:save_comments:70 - Comments saved: {'csv': 'D:\\XX\\Downloads\\Demo\\tiki-comment-crawler-main\\outputs\\keyword_comments_Iphone.csv'}
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:81 - Comments saved
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:84 - Keyword pipeline completed successfully!
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:85 -   - Keywords: ['Iphone']
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:86 -   - Products found: 40
+2026-07-20 15:46:15 | INFO     | pipelines.keyword_pipeline:keyword_pipeline:87 -   - Valid comments extracted: 146
+2026-07-20 15:48:45 | INFO     | pipelines.full_pipeline:full_pipeline:13 - Starting full pipeline: menu -> products -> comments
+2026-07-20 15:48:45 | INFO     | core.browser:launch:30 - Launching Playwright browser (headless=False)
+2026-07-20 15:48:49 | INFO     | core.browser:close:140 - Browser cleanup completed
+2026-07-20 15:48:49 | INFO     | crawlers.menu_crawler:close:52 - Menu crawler closed
+2026-07-20 15:48:49 | ERROR    | __main__:main:47 - Pipeline failed: BrowserType.launch: Executable doesn't exist at C:\Users\User\AppData\Local\ms-playwright\chromium-1228\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-07-20 15:49:18 | INFO     | pipelines.full_pipeline:full_pipeline:13 - Starting full pipeline: menu -> products -> comments
+2026-07-20 15:49:18 | INFO     | core.browser:launch:30 - Launching Playwright browser (headless=False)
+2026-07-20 15:49:18 | INFO     | core.browser:close:140 - Browser cleanup completed
+2026-07-20 15:49:18 | INFO     | crawlers.menu_crawler:close:52 - Menu crawler closed
+2026-07-20 15:49:18 | ERROR    | __main__:main:47 - Pipeline failed: BrowserType.launch: Executable doesn't exist at C:\Users\User\AppData\Local\ms-playwright\chromium-1228\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-07-20 15:55:23 | INFO     | __main__:main:70 - Running mode: menu
+2026-07-20 15:55:23 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-20 15:55:23 | INFO     | core.browser:launch:30 - Launching Playwright browser (headless=False)
+2026-07-20 15:55:23 | INFO     | core.browser:close:140 - Browser cleanup completed
+2026-07-20 15:55:23 | INFO     | crawlers.menu_crawler:close:52 - Menu crawler closed
+2026-07-20 15:55:23 | ERROR    | __main__:main:100 - Pipeline failed: BrowserType.launch: Executable doesn't exist at C:\Users\User\AppData\Local\ms-playwright\chromium-1228\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-07-20 15:56:13 | INFO     | __main__:main:70 - Running mode: menu
+2026-07-20 15:56:13 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-20 15:56:13 | INFO     | core.browser:launch:30 - Launching Playwright browser (headless=True)
+2026-07-20 15:56:14 | INFO     | core.browser:close:140 - Browser cleanup completed
+2026-07-20 15:56:14 | INFO     | crawlers.menu_crawler:close:52 - Menu crawler closed
+2026-07-20 15:56:14 | ERROR    | __main__:main:100 - Pipeline failed: BrowserType.launch: Executable doesn't exist at C:\Users\User\AppData\Local\ms-playwright\chromium_headless_shell-1228\chrome-headless-shell-win64\chrome-headless-shell.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-07-20 15:56:43 | INFO     | __main__:main:70 - Running mode: menu
+2026-07-20 15:56:43 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-20 15:56:43 | INFO     | core.browser:launch:30 - Launching Playwright browser (headless=True)
+2026-07-20 15:56:49 | INFO     | core.browser:launch:41 - Browser launched successfully
+2026-07-20 15:56:49 | INFO     | crawlers.menu_crawler:initialize:46 - Menu crawler initialized
+2026-07-20 15:56:49 | INFO     | crawlers.menu_crawler:crawl_level_1:105 - Starting level 1 category crawl
+2026-07-20 15:57:58 | INFO     | __main__:main:70 - Running mode: menu
+2026-07-20 15:57:58 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-20 15:57:58 | INFO     | core.browser:launch:30 - Launching Playwright browser (headless=False)
+2026-07-20 15:58:00 | INFO     | core.browser:launch:41 - Browser launched successfully
+2026-07-20 15:58:00 | INFO     | crawlers.menu_crawler:initialize:46 - Menu crawler initialized
+2026-07-20 15:58:00 | INFO     | crawlers.menu_crawler:crawl_level_1:105 - Starting level 1 category crawl
+2026-07-20 15:58:15 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/", waiting until "networkidle"
+
+2026-07-20 15:58:21 | INFO     | core.browser:goto_with_retry:110 - Successfully navigated to https://tiki.vn/
+2026-07-20 15:58:24 | INFO     | crawlers.menu_crawler:crawl_level_1:122 - Found 30 level 1 categories
+2026-07-20 15:58:25 | INFO     | crawlers.menu_crawler:crawl_level_1:154 - Crawled 26 level 1 categories
+2026-07-20 15:58:25 | INFO     | crawlers.menu_crawler:crawl_level_2_3:168 - Starting level 2/3 crawl for 26 categories
+2026-07-20 15:58:25 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/nha-sach-tiki/c8322", waiting until "networkidle"
+
+2026-07-20 15:58:26 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/nha-sach-tiki/c8322", waiting until "networkidle"
+
+2026-07-20 15:58:27 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/nha-sach-tiki/c8322", waiting until "networkidle"
+
+2026-07-20 15:58:27 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /nha-sach-tiki/c8322 after 3 attempts
+2026-07-20 15:58:27 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /nha-sach-tiki/c8322
+2026-07-20 15:58:27 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/nha-cua-doi-song/c1883", waiting until "networkidle"
+
+2026-07-20 15:58:28 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/nha-cua-doi-song/c1883", waiting until "networkidle"
+
+2026-07-20 15:58:29 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/nha-cua-doi-song/c1883", waiting until "networkidle"
+
+2026-07-20 15:58:29 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /nha-cua-doi-song/c1883 after 3 attempts
+2026-07-20 15:58:29 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /nha-cua-doi-song/c1883
+2026-07-20 15:58:30 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/dien-thoai-may-tinh-bang/c1789", waiting until "networkidle"
+
+2026-07-20 15:58:31 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/dien-thoai-may-tinh-bang/c1789", waiting until "networkidle"
+
+2026-07-20 15:58:32 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/dien-thoai-may-tinh-bang/c1789", waiting until "networkidle"
+
+2026-07-20 15:58:32 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /dien-thoai-may-tinh-bang/c1789 after 3 attempts
+2026-07-20 15:58:32 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /dien-thoai-may-tinh-bang/c1789
+2026-07-20 15:58:32 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/do-choi-me-be/c2549", waiting until "networkidle"
+
+2026-07-20 15:58:33 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/do-choi-me-be/c2549", waiting until "networkidle"
+
+2026-07-20 15:58:34 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/do-choi-me-be/c2549", waiting until "networkidle"
+
+2026-07-20 15:58:34 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /do-choi-me-be/c2549 after 3 attempts
+2026-07-20 15:58:34 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /do-choi-me-be/c2549
+2026-07-20 15:58:34 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/thiet-bi-kts-phu-kien-so/c1815", waiting until "networkidle"
+
+2026-07-20 15:58:35 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/thiet-bi-kts-phu-kien-so/c1815", waiting until "networkidle"
+
+2026-07-20 15:58:36 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/thiet-bi-kts-phu-kien-so/c1815", waiting until "networkidle"
+
+2026-07-20 15:58:36 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /thiet-bi-kts-phu-kien-so/c1815 after 3 attempts
+2026-07-20 15:58:36 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /thiet-bi-kts-phu-kien-so/c1815
+2026-07-20 15:58:36 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/dien-gia-dung/c1882", waiting until "networkidle"
+
+2026-07-20 15:58:37 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/dien-gia-dung/c1882", waiting until "networkidle"
+
+2026-07-20 15:58:38 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/dien-gia-dung/c1882", waiting until "networkidle"
+
+2026-07-20 15:58:38 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /dien-gia-dung/c1882 after 3 attempts
+2026-07-20 15:58:38 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /dien-gia-dung/c1882
+2026-07-20 15:58:39 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/lam-dep-suc-khoe/c1520", waiting until "networkidle"
+
+2026-07-20 15:58:40 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/lam-dep-suc-khoe/c1520", waiting until "networkidle"
+
+2026-07-20 15:58:41 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/lam-dep-suc-khoe/c1520", waiting until "networkidle"
+
+2026-07-20 15:58:41 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /lam-dep-suc-khoe/c1520 after 3 attempts
+2026-07-20 15:58:41 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /lam-dep-suc-khoe/c1520
+2026-07-20 15:58:41 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/o-to-xe-may-xe-dap/c8594", waiting until "networkidle"
+
+2026-07-20 15:58:42 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/o-to-xe-may-xe-dap/c8594", waiting until "networkidle"
+
+2026-07-20 15:58:43 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/o-to-xe-may-xe-dap/c8594", waiting until "networkidle"
+
+2026-07-20 15:58:43 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /o-to-xe-may-xe-dap/c8594 after 3 attempts
+2026-07-20 15:58:43 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /o-to-xe-may-xe-dap/c8594
+2026-07-20 15:58:43 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/thoi-trang-nu/c931", waiting until "networkidle"
+
+2026-07-20 15:58:44 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/thoi-trang-nu/c931", waiting until "networkidle"
+
+2026-07-20 15:58:45 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/thoi-trang-nu/c931", waiting until "networkidle"
+
+2026-07-20 15:58:45 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /thoi-trang-nu/c931 after 3 attempts
+2026-07-20 15:58:45 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /thoi-trang-nu/c931
+2026-07-20 15:58:46 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/bach-hoa-online/c4384", waiting until "networkidle"
+
+2026-07-20 15:58:47 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/bach-hoa-online/c4384", waiting until "networkidle"
+
+2026-07-20 15:58:48 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/bach-hoa-online/c4384", waiting until "networkidle"
+
+2026-07-20 15:58:48 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /bach-hoa-online/c4384 after 3 attempts
+2026-07-20 15:58:48 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /bach-hoa-online/c4384
+2026-07-20 15:58:48 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/the-thao-da-ngoai/c1975", waiting until "networkidle"
+
+2026-07-20 15:58:49 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/the-thao-da-ngoai/c1975", waiting until "networkidle"
+
+2026-07-20 15:58:50 | ERROR    | crawlers.menu_crawler:crawl_level_2_3:246 - Error crawling Thể Thao - Dã Ngoại: Page.wait_for_timeout: Target page, context or browser has been closed
+2026-07-20 15:58:50 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/thoi-trang-nam/c915", waiting until "networkidle"
+
+2026-07-20 15:58:51 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 2 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/thoi-trang-nam/c915", waiting until "networkidle"
+
+2026-07-20 15:58:53 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 3 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/thoi-trang-nam/c915", waiting until "networkidle"
+
+2026-07-20 15:58:53 | ERROR    | core.browser:goto_with_retry:118 - Failed to navigate to /thoi-trang-nam/c915 after 3 attempts
+2026-07-20 15:58:53 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:193 - Failed to load /thoi-trang-nam/c915
+2026-07-20 15:58:53 | WARNING  | core.browser:goto_with_retry:113 - Navigation attempt 1 failed: Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "/cross-border-hang-quoc-te/c17166", waiting until "networkidle"
+
+2026-07-20 15:58:53 | INFO     | core.browser:close:140 - Browser cleanup completed
+2026-07-20 15:58:53 | INFO     | crawlers.menu_crawler:close:52 - Menu crawler closed
+2026-07-20 15:58:53 | ERROR    | __main__:main:100 - Pipeline failed: BrowserContext.close: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\User\AppData\Local\ms-playwright\chromium-1228\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --disable-blink-features=AutomationControlled --user-data-dir=C:\Users\User\AppData\Local\Temp\playwright_chromiumdev_profile-ogkDxm --remote-debugging-pipe --no-startup-window
+<launched> pid=10820
+[pid=10820][err] [10820:17044:0720/155807.595:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=10820][err] [10820:17044:0720/155834.764:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=10820] <gracefully close start>
+2026-07-20 16:00:42 | INFO     | __main__:main:70 - Running mode: menu
+2026-07-20 16:00:42 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-20 16:00:42 | INFO     | core.browser:launch:31 - Launching Playwright browser (headless=False)
+2026-07-20 16:00:42 | INFO     | core.browser:launch:42 - Browser launched successfully
+2026-07-20 16:00:42 | INFO     | crawlers.menu_crawler:initialize:46 - Menu crawler initialized
+2026-07-20 16:00:42 | INFO     | crawlers.menu_crawler:crawl_level_1:105 - Starting level 1 category crawl
+2026-07-20 16:00:48 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/
+2026-07-20 16:00:51 | INFO     | crawlers.menu_crawler:crawl_level_1:122 - Found 30 level 1 categories
+2026-07-20 16:00:52 | INFO     | crawlers.menu_crawler:crawl_level_1:156 - Crawled 26 level 1 categories
+2026-07-20 16:00:52 | INFO     | crawlers.menu_crawler:crawl_level_2_3:170 - Starting level 2/3 crawl for 26 categories
+2026-07-20 16:01:07 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/nha-sach-tiki/c8322", waiting until "networkidle"
+
+2026-07-20 16:01:10 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/nha-sach-tiki/c8322
+2026-07-20 16:01:28 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/sach-tieng-anh/c320", waiting until "networkidle"
+
+2026-07-20 16:01:30 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/sach-tieng-anh/c320
+2026-07-20 16:01:54 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/art-photography/c623", waiting until "networkidle"
+
+2026-07-20 16:01:57 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/art-photography/c623
+2026-07-20 16:02:19 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/biographies-memoirs/c27", waiting until "networkidle"
+
+2026-07-20 16:02:35 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/biographies-memoirs/c27", waiting until "networkidle"
+
+2026-07-20 16:02:51 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/biographies-memoirs/c27", waiting until "networkidle"
+
+2026-07-20 16:02:51 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/biographies-memoirs/c27 after 3 attempts
+2026-07-20 16:02:51 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/biographies-memoirs/c27
+2026-07-20 16:03:06 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/business-economics/c4", waiting until "networkidle"
+
+2026-07-20 16:03:22 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/business-economics/c4", waiting until "networkidle"
+
+2026-07-20 16:03:38 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/business-economics/c4", waiting until "networkidle"
+
+2026-07-20 16:03:38 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/business-economics/c4 after 3 attempts
+2026-07-20 16:03:38 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/business-economics/c4
+2026-07-20 16:03:53 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/self-help/c614", waiting until "networkidle"
+
+2026-07-20 16:04:09 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/self-help/c614", waiting until "networkidle"
+
+2026-07-20 16:04:25 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/self-help/c614", waiting until "networkidle"
+
+2026-07-20 16:04:25 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/self-help/c614 after 3 attempts
+2026-07-20 16:04:25 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/self-help/c614
+2026-07-20 16:04:41 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/children-books/c7", waiting until "networkidle"
+
+2026-07-20 16:04:57 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/children-books/c7", waiting until "networkidle"
+
+2026-07-20 16:05:13 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/children-books/c7", waiting until "networkidle"
+
+2026-07-20 16:05:13 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/children-books/c7 after 3 attempts
+2026-07-20 16:05:13 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/children-books/c7
+2026-07-20 16:05:28 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dictionary/c282", waiting until "networkidle"
+
+2026-07-20 16:05:44 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dictionary/c282", waiting until "networkidle"
+
+2026-07-20 16:06:00 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dictionary/c282", waiting until "networkidle"
+
+2026-07-20 16:06:00 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/dictionary/c282 after 3 attempts
+2026-07-20 16:06:00 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/dictionary/c282
+2026-07-20 16:06:15 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/education-teaching/c5308", waiting until "networkidle"
+
+2026-07-20 16:06:31 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/education-teaching/c5308", waiting until "networkidle"
+
+2026-07-20 16:06:47 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/education-teaching/c5308", waiting until "networkidle"
+
+2026-07-20 16:06:47 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/education-teaching/c5308 after 3 attempts
+2026-07-20 16:06:47 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/education-teaching/c5308
+2026-07-20 16:07:03 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/fiction-literature/c9", waiting until "networkidle"
+
+2026-07-20 16:07:19 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/fiction-literature/c9", waiting until "networkidle"
+
+2026-07-20 16:07:35 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/fiction-literature/c9", waiting until "networkidle"
+
+2026-07-20 16:07:35 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/fiction-literature/c9 after 3 attempts
+2026-07-20 16:07:35 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/fiction-literature/c9
+2026-07-20 16:07:50 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/magazines/c6445", waiting until "networkidle"
+
+2026-07-20 16:08:06 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/magazines/c6445", waiting until "networkidle"
+
+2026-07-20 16:08:22 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/magazines/c6445", waiting until "networkidle"
+
+2026-07-20 16:08:22 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/magazines/c6445 after 3 attempts
+2026-07-20 16:08:22 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/magazines/c6445
+2026-07-20 16:08:37 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/medical-books/c218", waiting until "networkidle"
+
+2026-07-20 16:08:53 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/medical-books/c218", waiting until "networkidle"
+
+2026-07-20 16:09:09 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/medical-books/c218", waiting until "networkidle"
+
+2026-07-20 16:09:09 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/medical-books/c218 after 3 attempts
+2026-07-20 16:09:09 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/medical-books/c218
+2026-07-20 16:09:25 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/parenting-relationships/c28", waiting until "networkidle"
+
+2026-07-20 16:09:41 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/parenting-relationships/c28", waiting until "networkidle"
+
+2026-07-20 16:09:57 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/parenting-relationships/c28", waiting until "networkidle"
+
+2026-07-20 16:09:57 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/parenting-relationships/c28 after 3 attempts
+2026-07-20 16:09:57 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/parenting-relationships/c28
+2026-07-20 16:10:12 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/reference/c5309", waiting until "networkidle"
+
+2026-07-20 16:10:28 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/reference/c5309", waiting until "networkidle"
+
+2026-07-20 16:10:44 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/reference/c5309", waiting until "networkidle"
+
+2026-07-20 16:10:44 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/reference/c5309 after 3 attempts
+2026-07-20 16:10:44 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/reference/c5309
+2026-07-20 16:10:59 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/science-technology/c269", waiting until "networkidle"
+
+2026-07-20 16:11:15 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/science-technology/c269", waiting until "networkidle"
+
+2026-07-20 16:11:31 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/science-technology/c269", waiting until "networkidle"
+
+2026-07-20 16:11:31 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/science-technology/c269 after 3 attempts
+2026-07-20 16:11:31 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/science-technology/c269
+2026-07-20 16:11:47 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/history-politics-social-sciences/c632", waiting until "networkidle"
+
+2026-07-20 16:12:03 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/history-politics-social-sciences/c632", waiting until "networkidle"
+
+2026-07-20 16:12:19 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/history-politics-social-sciences/c632", waiting until "networkidle"
+
+2026-07-20 16:12:19 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/history-politics-social-sciences/c632 after 3 attempts
+2026-07-20 16:12:19 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/history-politics-social-sciences/c632
+2026-07-20 16:12:34 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/travel-holiday/c32", waiting until "networkidle"
+
+2026-07-20 16:12:50 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/travel-holiday/c32", waiting until "networkidle"
+
+2026-07-20 16:13:06 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/travel-holiday/c32", waiting until "networkidle"
+
+2026-07-20 16:13:06 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/travel-holiday/c32 after 3 attempts
+2026-07-20 16:13:06 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/travel-holiday/c32
+2026-07-20 16:13:21 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/cookbooks-food-wine/c21", waiting until "networkidle"
+
+2026-07-20 16:13:37 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/cookbooks-food-wine/c21", waiting until "networkidle"
+
+2026-07-20 16:13:53 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/cookbooks-food-wine/c21", waiting until "networkidle"
+
+2026-07-20 16:13:53 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/cookbooks-food-wine/c21 after 3 attempts
+2026-07-20 16:13:53 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/cookbooks-food-wine/c21
+2026-07-20 16:14:09 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/sach-truyen-tieng-viet/c316", waiting until "networkidle"
+
+2026-07-20 16:14:25 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/sach-truyen-tieng-viet/c316", waiting until "networkidle"
+
+2026-07-20 16:14:41 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/sach-truyen-tieng-viet/c316", waiting until "networkidle"
+
+2026-07-20 16:14:41 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/sach-truyen-tieng-viet/c316 after 3 attempts
+2026-07-20 16:14:41 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/sach-truyen-tieng-viet/c316
+2026-07-20 16:14:56 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/van-phong-pham-qua-luu-niem/c7741", waiting until "networkidle"
+
+2026-07-20 16:15:12 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/van-phong-pham-qua-luu-niem/c7741", waiting until "networkidle"
+
+2026-07-20 16:15:28 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/van-phong-pham-qua-luu-niem/c7741", waiting until "networkidle"
+
+2026-07-20 16:15:28 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/van-phong-pham-qua-luu-niem/c7741 after 3 attempts
+2026-07-20 16:15:28 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/van-phong-pham-qua-luu-niem/c7741
+2026-07-20 16:15:43 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/qua-luu-niem/c18328", waiting until "networkidle"
+
+2026-07-20 16:16:00 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/qua-luu-niem/c18328", waiting until "networkidle"
+
+2026-07-20 16:16:16 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/qua-luu-niem/c18328", waiting until "networkidle"
+
+2026-07-20 16:16:16 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/qua-luu-niem/c18328 after 3 attempts
+2026-07-20 16:16:16 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/qua-luu-niem/c18328
+2026-07-20 16:16:20 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/cua-hang/phan-le-friends?itm_campaign=CTP_YPD_TKA_BSA_UNK_ALL_UNK_UNK_UNK_UNK_X.314455_Y.1896775_Z.4074355_CN.Shop-19%252F7---2%252F8&itm_medium=CPC&itm_source=tiki-ads
+2026-07-20 16:16:34 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/cua-hang/deli-official-store?category_id=1858&itm_campaign=CTP_YPD_TKA_BSA_UNK_ALL_UNK_UNK_UNK_UNK_X.191443_Y.1773770_Z.3473877_CN.But-Gel-l-Store-Ads&itm_medium=CPC&itm_source=tiki-ads&parent_id=7741&t=product
+2026-07-20 16:16:42 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/chinh-sach-kiem-hang
+2026-07-20 16:16:57 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/chinh-sach-gia-ca
+2026-07-20 16:17:04 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/chinh-sach-thanh-toan
+2026-07-20 16:17:13 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/chinh-sach-uu-tien-hien-thi
+2026-07-20 16:17:24 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/chinh-sach-cung-cap-dich-vu
+2026-07-20 16:17:33 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/chinh-sach-cham-dut-dich-vu
+2026-07-20 16:17:42 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thuong-hieu/comfort.html
+2026-07-20 16:18:03 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/do-choi-me-be/c2549", waiting until "networkidle"
+
+2026-07-20 16:18:19 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/do-choi-me-be/c2549", waiting until "networkidle"
+
+2026-07-20 16:18:35 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/do-choi-me-be/c2549", waiting until "networkidle"
+
+2026-07-20 16:18:35 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/do-choi-me-be/c2549 after 3 attempts
+2026-07-20 16:18:35 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/do-choi-me-be/c2549
+2026-07-20 16:18:50 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/thoi-trang-cho-me-va-be/c11603", waiting until "networkidle"
+
+2026-07-20 16:19:06 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/thoi-trang-cho-me-va-be/c11603", waiting until "networkidle"
+
+2026-07-20 16:19:22 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/thoi-trang-cho-me-va-be/c11603", waiting until "networkidle"
+
+2026-07-20 16:19:22 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/thoi-trang-cho-me-va-be/c11603 after 3 attempts
+2026-07-20 16:19:22 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/thoi-trang-cho-me-va-be/c11603
+2026-07-20 16:19:38 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/do-choi/c5250", waiting until "networkidle"
+
+2026-07-20 16:19:54 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/do-choi/c5250", waiting until "networkidle"
+
+2026-07-20 16:20:10 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/do-choi/c5250", waiting until "networkidle"
+
+2026-07-20 16:20:10 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/do-choi/c5250 after 3 attempts
+2026-07-20 16:20:10 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/do-choi/c5250
+2026-07-20 16:20:25 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/do-dung-cho-be/c11601", waiting until "networkidle"
+
+2026-07-20 16:20:41 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/do-dung-cho-be/c11601", waiting until "networkidle"
+
+2026-07-20 16:20:57 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/do-dung-cho-be/c11601", waiting until "networkidle"
+
+2026-07-20 16:20:57 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/do-dung-cho-be/c11601 after 3 attempts
+2026-07-20 16:20:57 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/do-dung-cho-be/c11601
+2026-07-20 16:21:12 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/cham-soc-nha-cua/c15078", waiting until "networkidle"
+
+2026-07-20 16:21:28 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/cham-soc-nha-cua/c15078", waiting until "networkidle"
+
+2026-07-20 16:21:44 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/cham-soc-nha-cua/c15078", waiting until "networkidle"
+
+2026-07-20 16:21:44 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/cham-soc-nha-cua/c15078 after 3 attempts
+2026-07-20 16:21:44 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/cham-soc-nha-cua/c15078
+2026-07-20 16:22:00 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/cham-soc-me-mang-thai-sau-sinh/c2640", waiting until "networkidle"
+
+2026-07-20 16:22:16 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/cham-soc-me-mang-thai-sau-sinh/c2640", waiting until "networkidle"
+
+2026-07-20 16:22:32 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/cham-soc-me-mang-thai-sau-sinh/c2640", waiting until "networkidle"
+
+2026-07-20 16:22:32 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/cham-soc-me-mang-thai-sau-sinh/c2640 after 3 attempts
+2026-07-20 16:22:32 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/cham-soc-me-mang-thai-sau-sinh/c2640
+2026-07-20 16:22:47 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dinh-duong-cho-be/c8339", waiting until "networkidle"
+
+2026-07-20 16:23:03 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dinh-duong-cho-be/c8339", waiting until "networkidle"
+
+2026-07-20 16:23:19 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dinh-duong-cho-be/c8339", waiting until "networkidle"
+
+2026-07-20 16:23:19 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/dinh-duong-cho-be/c8339 after 3 attempts
+2026-07-20 16:23:19 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/dinh-duong-cho-be/c8339
+2026-07-20 16:23:34 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/ta-bim-cho-be/c2551", waiting until "networkidle"
+
+2026-07-20 16:23:50 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/ta-bim-cho-be/c2551", waiting until "networkidle"
+
+2026-07-20 16:24:06 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/ta-bim-cho-be/c2551", waiting until "networkidle"
+
+2026-07-20 16:24:06 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/ta-bim-cho-be/c2551 after 3 attempts
+2026-07-20 16:24:06 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/ta-bim-cho-be/c2551
+2026-07-20 16:24:22 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dinh-duong-cho-nguoi-lon/c10418", waiting until "networkidle"
+
+2026-07-20 16:24:38 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dinh-duong-cho-nguoi-lon/c10418", waiting until "networkidle"
+
+2026-07-20 16:24:54 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dinh-duong-cho-nguoi-lon/c10418", waiting until "networkidle"
+
+2026-07-20 16:24:54 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/dinh-duong-cho-nguoi-lon/c10418 after 3 attempts
+2026-07-20 16:24:54 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/dinh-duong-cho-nguoi-lon/c10418
+2026-07-20 16:25:09 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dinh-duong-cho-me/c10416", waiting until "networkidle"
+
+2026-07-20 16:25:25 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dinh-duong-cho-me/c10416", waiting until "networkidle"
+
+2026-07-20 16:25:41 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/dinh-duong-cho-me/c10416", waiting until "networkidle"
+
+2026-07-20 16:25:41 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/dinh-duong-cho-me/c10416 after 3 attempts
+2026-07-20 16:25:41 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/dinh-duong-cho-me/c10416
+2026-07-20 16:25:56 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/thuc-pham-an-dam/c6568", waiting until "networkidle"
+
+2026-07-20 16:26:13 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/thuc-pham-an-dam/c6568", waiting until "networkidle"
+
+2026-07-20 16:26:29 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/thuc-pham-an-dam/c6568", waiting until "networkidle"
+
+2026-07-20 16:26:29 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/thuc-pham-an-dam/c6568 after 3 attempts
+2026-07-20 16:26:29 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/thuc-pham-an-dam/c6568
+2026-07-20 16:26:44 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/chuan-bi-mang-thai/c10570", waiting until "networkidle"
+
+2026-07-20 16:27:00 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/chuan-bi-mang-thai/c10570", waiting until "networkidle"
+
+2026-07-20 16:27:16 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/chuan-bi-mang-thai/c10570", waiting until "networkidle"
+
+2026-07-20 16:27:16 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/chuan-bi-mang-thai/c10570 after 3 attempts
+2026-07-20 16:27:16 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/chuan-bi-mang-thai/c10570
+2026-07-20 16:27:31 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/trai-cay/c44824", waiting until "networkidle"
+
+2026-07-20 16:27:47 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/trai-cay/c44824", waiting until "networkidle"
+
+2026-07-20 16:28:03 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/trai-cay/c44824", waiting until "networkidle"
+
+2026-07-20 16:28:03 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/di-cho-online/trai-cay/c44824 after 3 attempts
+2026-07-20 16:28:03 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/di-cho-online/trai-cay/c44824
+2026-07-20 16:28:19 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/thit-trung/c54276", waiting until "networkidle"
+
+2026-07-20 16:28:35 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/thit-trung/c54276", waiting until "networkidle"
+
+2026-07-20 16:28:51 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/thit-trung/c54276", waiting until "networkidle"
+
+2026-07-20 16:28:51 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/di-cho-online/thit-trung/c54276 after 3 attempts
+2026-07-20 16:28:51 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/di-cho-online/thit-trung/c54276
+2026-07-20 16:29:06 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/ca-thuy-hai-san/c54290", waiting until "networkidle"
+
+2026-07-20 16:29:22 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/ca-thuy-hai-san/c54290", waiting until "networkidle"
+
+2026-07-20 16:29:38 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/ca-thuy-hai-san/c54290", waiting until "networkidle"
+
+2026-07-20 16:29:38 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/di-cho-online/ca-thuy-hai-san/c54290 after 3 attempts
+2026-07-20 16:29:38 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/di-cho-online/ca-thuy-hai-san/c54290
+2026-07-20 16:29:53 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/rau-cu-qua/c54302", waiting until "networkidle"
+
+2026-07-20 16:30:09 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/rau-cu-qua/c54302", waiting until "networkidle"
+
+2026-07-20 16:30:25 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/rau-cu-qua/c54302", waiting until "networkidle"
+
+2026-07-20 16:30:25 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/di-cho-online/rau-cu-qua/c54302 after 3 attempts
+2026-07-20 16:30:25 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/di-cho-online/rau-cu-qua/c54302
+2026-07-20 16:30:41 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/thuc-pham-viet/c54316", waiting until "networkidle"
+
+2026-07-20 16:30:57 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/thuc-pham-viet/c54316", waiting until "networkidle"
+
+2026-07-20 16:31:13 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/thuc-pham-viet/c54316", waiting until "networkidle"
+
+2026-07-20 16:31:13 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/di-cho-online/thuc-pham-viet/c54316 after 3 attempts
+2026-07-20 16:31:13 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/di-cho-online/thuc-pham-viet/c54316
+2026-07-20 16:31:28 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/sua-bo-pho-mai/c54330", waiting until "networkidle"
+
+2026-07-20 16:31:44 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/sua-bo-pho-mai/c54330", waiting until "networkidle"
+
+2026-07-20 16:32:00 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/sua-bo-pho-mai/c54330", waiting until "networkidle"
+
+2026-07-20 16:32:00 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/di-cho-online/sua-bo-pho-mai/c54330 after 3 attempts
+2026-07-20 16:32:00 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/di-cho-online/sua-bo-pho-mai/c54330
+2026-07-20 16:32:15 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/dong-lanh-mat/c54344", waiting until "networkidle"
+
+2026-07-20 16:32:31 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/dong-lanh-mat/c54344", waiting until "networkidle"
+
+2026-07-20 16:32:47 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/dong-lanh-mat/c54344", waiting until "networkidle"
+
+2026-07-20 16:32:47 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/di-cho-online/dong-lanh-mat/c54344 after 3 attempts
+2026-07-20 16:32:47 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/di-cho-online/dong-lanh-mat/c54344
+2026-07-20 16:33:03 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/dau-an-gia-vi/c54362", waiting until "networkidle"
+
+2026-07-20 16:33:19 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/dau-an-gia-vi/c54362", waiting until "networkidle"
+
+2026-07-20 16:33:35 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/dau-an-gia-vi/c54362", waiting until "networkidle"
+
+2026-07-20 16:33:35 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/di-cho-online/dau-an-gia-vi/c54362 after 3 attempts
+2026-07-20 16:33:35 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/di-cho-online/dau-an-gia-vi/c54362
+2026-07-20 16:33:50 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 1 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/gao-mi-nong-san/c54384", waiting until "networkidle"
+
+2026-07-20 16:34:06 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 2 failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/gao-mi-nong-san/c54384", waiting until "networkidle"
+
+2026-07-20 16:34:10 | WARNING  | core.browser:goto_with_retry:116 - Navigation attempt 3 failed: Page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://tiki.vn/di-cho-online/gao-mi-nong-san/c54384", waiting until "networkidle"
+
+2026-07-20 16:34:10 | ERROR    | core.browser:goto_with_retry:121 - Failed to navigate to https://tiki.vn/di-cho-online/gao-mi-nong-san/c54384 after 3 attempts
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:_crawl_level_3:286 - Failed to load https://tiki.vn/di-cho-online/gao-mi-nong-san/c54384
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:10 | WARNING  | crawlers.menu_crawler:crawl_level_2_3:246 - Error processing L2 category: Locator.text_content: Target page, context or browser has been closed
+2026-07-20 16:34:17 | INFO     | core.browser:close:143 - Browser cleanup completed
+2026-07-20 16:34:17 | INFO     | crawlers.menu_crawler:close:52 - Menu crawler closed
+2026-07-20 16:34:17 | ERROR    | __main__:main:100 - Pipeline failed: BrowserContext.close: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\User\AppData\Local\ms-playwright\chromium-1228\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --disable-blink-features=AutomationControlled --user-data-dir=C:\Users\User\AppData\Local\Temp\playwright_chromiumdev_profile-H9r8qY --remote-debugging-pipe --no-startup-window
+<launched> pid=14064
+[pid=14064][err] [14064:13000:0720/160049.792:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=14064][err] [14064:13000:0720/160113.612:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=14064][err] [14064:13000:0720/160200.466:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=14064][err] [14064:3652:0720/160251.335:ERROR:chrome\browser\ui\views\user_education\impl\browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.
+[pid=14064][err] [14064:13000:0720/160326.551:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=14064][err] [14064:13000:0720/160649.897:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=14064][err] [14064:3652:0720/160909.976:ERROR:chrome\browser\ui\views\user_education\impl\browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.
+[pid=14064][err] [14064:13000:0720/161349.757:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=14064][err] [14064:3652:0720/161528.908:ERROR:chrome\browser\ui\views\user_education\impl\browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.
+[pid=14064][err] [14064:3652:0720/161730.105:ERROR:chrome\browser\ui\views\user_education\impl\browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.
+[pid=14064][err] [14064:3652:0720/162145.156:ERROR:chrome\browser\ui\views\user_education\impl\browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.
+[pid=14064][err] [14064:3652:0720/162803.970:ERROR:chrome\browser\ui\views\user_education\impl\browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.
+[pid=14064] <gracefully close start>
+2026-07-20 16:36:11 | INFO     | __main__:test:8 - Starting fast menu crawler test...
+2026-07-20 16:36:11 | INFO     | core.browser:launch:31 - Launching Playwright browser (headless=True)
+2026-07-20 16:36:12 | INFO     | core.browser:launch:42 - Browser launched successfully
+2026-07-20 16:36:12 | INFO     | crawlers.menu_crawler:initialize:49 - Menu crawler initialized
+2026-07-20 16:36:12 | INFO     | crawlers.menu_crawler:crawl_level_1:159 - Starting level 1 category crawl
+2026-07-20 16:36:13 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/
+2026-07-20 16:36:13 | INFO     | crawlers.menu_crawler:crawl_level_1:174 - Found 30 raw level 1 category elements
+2026-07-20 16:36:15 | INFO     | crawlers.menu_crawler:crawl_level_1:205 - Extracted 26 valid level 1 categories
+2026-07-20 16:36:15 | INFO     | crawlers.menu_crawler:crawl_level_2_3:219 - Starting level 2/3 crawl for 26 level 1 categories
+2026-07-20 16:41:32 | INFO     | __main__:main:70 - Running mode: menu
+2026-07-20 16:41:32 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-20 16:41:32 | INFO     | core.browser:launch:31 - Launching Playwright browser (headless=False)
+2026-07-20 16:41:33 | INFO     | core.browser:launch:42 - Browser launched successfully
+2026-07-20 16:41:33 | INFO     | crawlers.menu_crawler:initialize:49 - Menu crawler initialized
+2026-07-20 16:41:33 | INFO     | crawlers.menu_crawler:crawl_level_1:159 - Starting level 1 category crawl
+2026-07-20 16:41:34 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/
+2026-07-20 16:41:34 | INFO     | crawlers.menu_crawler:crawl_level_1:174 - Found 30 raw level 1 category elements
+2026-07-20 16:41:36 | INFO     | crawlers.menu_crawler:crawl_level_1:205 - Extracted 26 valid level 1 categories
+2026-07-20 16:41:36 | INFO     | crawlers.menu_crawler:crawl_level_2_3:219 - Starting level 2/3 crawl for 26 level 1 categories
+2026-07-20 16:41:47 | INFO     | crawlers.menu_crawler:crawl:366 - Menu crawl completed. Total categories: 1269
+2026-07-20 16:41:47 | INFO     | core.browser:close:143 - Browser cleanup completed
+2026-07-20 16:41:47 | INFO     | crawlers.menu_crawler:close:57 - Menu crawler closed
+2026-07-20 16:41:47 | INFO     | __main__:test:11 - DONE! Total categories crawled: 1269 in 335.80 seconds.
+2026-07-20 16:42:10 | INFO     | __main__:main:70 - Running mode: menu
+2026-07-20 16:42:10 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-20 16:42:10 | INFO     | core.browser:launch:31 - Launching Playwright browser (headless=True)
+2026-07-20 16:42:11 | INFO     | core.browser:launch:42 - Browser launched successfully
+2026-07-20 16:42:11 | INFO     | crawlers.menu_crawler:initialize:50 - Menu crawler initialized
+2026-07-20 16:42:11 | INFO     | crawlers.menu_crawler:crawl_level_1:160 - Starting level 1 category crawl
+2026-07-20 16:42:12 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/
+2026-07-20 16:42:12 | INFO     | crawlers.menu_crawler:crawl_level_1:175 - Found 30 raw level 1 category elements
+2026-07-20 16:42:14 | INFO     | crawlers.menu_crawler:crawl_level_1:206 - Extracted 26 valid level 1 categories
+2026-07-20 16:42:14 | INFO     | crawlers.menu_crawler:crawl_level_2_3:221 - Starting level 2/3 crawl for 26 level 1 categories
+2026-07-20 16:42:31 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dien-gia-dung/c1882
+2026-07-20 16:42:35 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dien-gia-dung/c1882
+2026-07-20 16:42:37 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/lam-dep-suc-khoe/c1520
+2026-07-20 16:42:44 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/o-to-xe-may-xe-dap/c8594
+2026-07-20 16:42:44 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/lam-dep-suc-khoe/c1520
+2026-07-20 16:42:50 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thoi-trang-nu/c931
+2026-07-20 16:42:52 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/o-to-xe-may-xe-dap/c8594
+2026-07-20 16:42:57 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/bach-hoa-online/c4384
+2026-07-20 16:42:59 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thoi-trang-nu/c931
+2026-07-20 16:43:04 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/the-thao-da-ngoai/c1975
+2026-07-20 16:43:06 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/bach-hoa-online/c4384
+2026-07-20 16:43:13 | INFO     | core.browser:close:143 - Browser cleanup completed
+2026-07-20 16:43:13 | INFO     | crawlers.menu_crawler:close:57 - Menu crawler closed
+2026-07-20 16:43:13 | ERROR    | __main__:main:100 - Pipeline failed: BrowserContext.close: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\User\AppData\Local\ms-playwright\chromium-1228\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --disable-blink-features=AutomationControlled --user-data-dir=C:\Users\User\AppData\Local\Temp\playwright_chromiumdev_profile-jjNtRF --remote-debugging-pipe --no-startup-window
+<launched> pid=15920
+[pid=15920][err] [15920:18100:0720/164248.996:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=15920][err] [15920:18100:0720/164312.435:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=15920] <gracefully close start>
+2026-07-20 16:43:14 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thoi-trang-nam/c915
+2026-07-20 16:43:22 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/cross-border-hang-quoc-te/c17166
+2026-07-20 16:43:27 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/laptop-may-vi-tinh-linh-kien/c1846
+2026-07-20 16:43:34 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/giay-dep-nam/c1686
+2026-07-20 16:43:36 | INFO     | __main__:main:70 - Running mode: menu
+2026-07-20 16:43:36 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-20 16:43:36 | INFO     | core.browser:launch:31 - Launching Playwright browser (headless=False)
+2026-07-20 16:43:37 | INFO     | core.browser:launch:42 - Browser launched successfully
+2026-07-20 16:43:37 | INFO     | crawlers.menu_crawler:initialize:50 - Menu crawler initialized
+2026-07-20 16:43:37 | INFO     | crawlers.menu_crawler:crawl_level_1:160 - Starting level 1 category crawl
+2026-07-20 16:43:37 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/
+2026-07-20 16:43:38 | INFO     | crawlers.menu_crawler:crawl_level_1:175 - Found 30 raw level 1 category elements
+2026-07-20 16:43:40 | INFO     | crawlers.menu_crawler:crawl_level_1:206 - Extracted 26 valid level 1 categories
+2026-07-20 16:43:40 | INFO     | crawlers.menu_crawler:crawl_level_2_3:221 - Starting level 2/3 crawl for 26 level 1 categories
+2026-07-20 16:43:41 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dien-tu-dien-lanh/c4221
+2026-07-20 16:43:43 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/nha-sach-tiki/c8322
+2026-07-20 16:43:48 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/nha-cua-doi-song/c1883
+2026-07-20 16:43:53 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dien-thoai-may-tinh-bang/c1789
+2026-07-20 16:43:58 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/do-choi-me-be/c2549
+2026-07-20 16:44:03 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thiet-bi-kts-phu-kien-so/c1815
+2026-07-20 16:44:06 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/giay-dep-nu/c1703
+2026-07-20 16:44:07 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dien-gia-dung/c1882
+2026-07-20 16:44:13 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/lam-dep-suc-khoe/c1520
+2026-07-20 16:44:14 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/may-anh/c1801
+2026-07-20 16:44:20 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/o-to-xe-may-xe-dap/c8594
+2026-07-20 16:44:23 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/phu-kien-thoi-trang/c27498
+2026-07-20 16:44:31 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/ngon/c44792
+2026-07-20 16:44:37 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dong-ho-va-trang-suc/c8371
+2026-07-20 16:44:44 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/balo-va-vali/c6000
+2026-07-20 16:44:49 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/voucher-dich-vu/c11312
+2026-07-20 16:44:54 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/tui-vi-nu/c976
+2026-07-20 16:44:56 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thoi-trang-nu/c931
+2026-07-20 16:44:59 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/tui-thoi-trang-nam/c27616
+2026-07-20 16:45:03 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/bach-hoa-online/c4384
+2026-07-20 16:45:05 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/cham-soc-nha-cua/c15078
+2026-07-20 16:45:08 | INFO     | crawlers.menu_crawler:crawl:388 - Menu crawl completed. Total categories: 5337
+2026-07-20 16:45:08 | INFO     | core.browser:close:143 - Browser cleanup completed
+2026-07-20 16:45:08 | INFO     | crawlers.menu_crawler:close:58 - Menu crawler closed
+2026-07-20 16:45:08 | INFO     | services.category_service:save_categories:56 - Saving 5337 categories
+2026-07-20 16:45:08 | INFO     | services.category_service:categories_to_dataframe:26 - Converting 5337 categories to DataFrame
+2026-07-20 16:45:08 | INFO     | services.category_service:categories_to_dataframe:31 - Created DataFrame with shape: (5337, 8)
+2026-07-20 16:45:08 | INFO     | core.storage:export_dataframe:58 - Exported 5337 rows to D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\tiki_menu_3_levels.csv
+2026-07-20 16:45:08 | INFO     | services.category_service:save_categories:67 - Categories saved: {'csv': 'D:\\XX\\Downloads\\Demo\\tiki-comment-crawler-main\\outputs\\tiki_menu_3_levels.csv'}
+2026-07-20 16:45:08 | INFO     | pipelines.menu_pipeline:menu_pipeline:35 - Menu pipeline completed. Total categories: 5337
+2026-07-20 16:45:09 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/the-thao-da-ngoai/c1975
+2026-07-20 16:45:17 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/thoi-trang-nam/c915
+2026-07-20 16:45:23 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/cross-border-hang-quoc-te/c17166
+2026-07-20 16:45:28 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/laptop-may-vi-tinh-linh-kien/c1846
+2026-07-20 16:45:34 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/giay-dep-nam/c1686
+2026-07-20 16:45:39 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dien-tu-dien-lanh/c4221
+2026-07-20 16:45:59 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/giay-dep-nu/c1703
+2026-07-20 16:46:04 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/may-anh/c1801
+2026-07-20 16:46:39 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/phu-kien-thoi-trang/c27498
+2026-07-20 16:46:45 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/ngon/c44792
+2026-07-20 16:46:52 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/dong-ho-va-trang-suc/c8371
+2026-07-20 16:46:59 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/balo-va-vali/c6000
+2026-07-20 16:47:05 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/voucher-dich-vu/c11312
+2026-07-20 16:47:27 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/tui-vi-nu/c976
+2026-07-20 16:47:34 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/tui-thoi-trang-nam/c27616
+2026-07-20 16:47:40 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/cham-soc-nha-cua/c15078
+2026-07-20 16:47:44 | INFO     | crawlers.menu_crawler:crawl:388 - Menu crawl completed. Total categories: 6304
+2026-07-20 16:47:45 | INFO     | core.browser:close:143 - Browser cleanup completed
+2026-07-20 16:47:45 | INFO     | crawlers.menu_crawler:close:58 - Menu crawler closed
+2026-07-20 16:47:45 | INFO     | services.category_service:save_categories:56 - Saving 6304 categories
+2026-07-20 16:47:45 | INFO     | services.category_service:categories_to_dataframe:26 - Converting 6304 categories to DataFrame
+2026-07-20 16:47:45 | INFO     | services.category_service:categories_to_dataframe:31 - Created DataFrame with shape: (6304, 8)
+2026-07-20 16:47:45 | INFO     | core.storage:export_dataframe:58 - Exported 6304 rows to D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\tiki_menu_3_levels.csv
+2026-07-20 16:47:45 | INFO     | services.category_service:save_categories:67 - Categories saved: {'csv': 'D:\\XX\\Downloads\\Demo\\tiki-comment-crawler-main\\outputs\\tiki_menu_3_levels.csv'}
+2026-07-20 16:47:45 | INFO     | pipelines.menu_pipeline:menu_pipeline:35 - Menu pipeline completed. Total categories: 6304
+2026-07-20 17:06:06 | INFO     | services.category_service:load_categories:81 - Loading categories from D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\tiki_menu_3_levels.csv
+2026-07-20 17:06:06 | INFO     | core.storage:load_dataframe:107 - Loaded 6304 rows from D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\tiki_menu_3_levels.csv
+2026-07-20 17:06:17 | INFO     | services.category_service:load_categories:81 - Loading categories from D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\tiki_menu_3_levels.csv
+2026-07-20 17:06:17 | INFO     | core.storage:load_dataframe:107 - Loaded 6304 rows from D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\tiki_menu_3_levels.csv
+2026-07-20 17:06:17 | INFO     | services.category_service:load_categories:96 - Loaded 6304 categories
+2026-07-20 17:07:54 | INFO     | __main__:main:104 - Running mode: products_from_menu
+2026-07-20 17:07:54 | INFO     | pipelines.products_from_menu_pipeline:products_from_menu_pipeline:24 - Starting products_from_menu pipeline
+2026-07-20 17:07:54 | INFO     | pipelines.products_from_menu_pipeline:products_from_menu_pipeline:43 - Loading categories from: outputs/tiki_menu_3_levels.csv
+2026-07-20 17:07:54 | INFO     | services.category_service:load_categories:81 - Loading categories from outputs/tiki_menu_3_levels.csv
+2026-07-20 17:07:54 | INFO     | core.storage:load_dataframe:107 - Loaded 6304 rows from outputs\tiki_menu_3_levels.csv
+2026-07-20 17:07:54 | INFO     | services.category_service:load_categories:96 - Loaded 6304 categories
+2026-07-20 17:07:54 | INFO     | pipelines.products_from_menu_pipeline:products_from_menu_pipeline:45 - Loaded 6304 categories
+2026-07-20 17:07:54 | INFO     | crawlers.product_crawler:crawl_categories:244 - Starting product crawl for 6304 categories
+2026-07-20 17:07:54 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Nhà Sách Tiki (ID: 8322)
+2026-07-20 17:07:56 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Nhà Sách Tiki: 40 products
+2026-07-20 17:07:56 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: English Books (ID: 320)
+2026-07-20 17:07:58 | INFO     | crawlers.product_crawler:crawl_category:231 - Category English Books: 40 products
+2026-07-20 17:07:58 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Art & Photography (ID: 623)
+2026-07-20 17:07:59 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Art & Photography: 40 products
+2026-07-20 17:07:59 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Biographies & Memoirs (ID: 27)
+2026-07-20 17:08:00 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Biographies & Memoirs: 40 products
+2026-07-20 17:08:00 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Business & Economics (ID: 4)
+2026-07-20 17:08:02 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Business & Economics: 40 products
+2026-07-20 17:08:02 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: How-to - Self Help (ID: 614)
+2026-07-20 17:08:04 | INFO     | crawlers.product_crawler:crawl_category:231 - Category How-to - Self Help: 40 products
+2026-07-20 17:08:04 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Children's Books (ID: 7)
+2026-07-20 17:08:05 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Children's Books: 40 products
+2026-07-20 17:08:05 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Dictionary (ID: 282)
+2026-07-20 17:08:06 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Dictionary: 40 products
+2026-07-20 17:08:06 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Education - Teaching (ID: 5308)
+2026-07-20 17:08:07 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Education - Teaching: 40 products
+2026-07-20 17:08:07 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Fiction - Literature (ID: 9)
+2026-07-20 17:08:09 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Fiction - Literature: 40 products
+2026-07-20 17:08:09 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Magazines (ID: 6445)
+2026-07-20 17:08:11 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Magazines: 32 products
+2026-07-20 17:08:11 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Medical Books (ID: 218)
+2026-07-20 17:08:13 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Medical Books: 10 products
+2026-07-20 17:08:13 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Parenting & Relationships (ID: 28)
+2026-07-20 17:08:15 | INFO     | crawlers.product_crawler:crawl_category:231 - Category Parenting & Relationships: 19 products
+2026-07-20 17:08:15 | INFO     | crawlers.product_crawler:crawl_category:184 - Crawling category: Reference (ID: 5309)
+2026-07-20 17:08:16 | INFO     | crawlers.product_crawler:close:272 - Product crawler closed
+2026-07-20 17:09:40 | INFO     | __main__:main:96 - Running mode: menu
+2026-07-20 17:09:40 | INFO     | pipelines.menu_pipeline:menu_pipeline:23 - Starting menu pipeline
+2026-07-20 17:09:40 | INFO     | core.browser:launch:31 - Launching Playwright browser (headless=True)
+2026-07-20 17:09:41 | INFO     | core.browser:launch:42 - Browser launched successfully
+2026-07-20 17:09:41 | INFO     | crawlers.menu_crawler:initialize:50 - Menu crawler initialized
+2026-07-20 17:09:41 | INFO     | crawlers.menu_crawler:crawl_level_1:160 - Starting level 1 category crawl
+2026-07-20 17:09:44 | INFO     | core.browser:goto_with_retry:113 - Successfully navigated to https://tiki.vn/
+2026-07-20 17:09:45 | INFO     | crawlers.menu_crawler:crawl_level_1:175 - Found 30 raw level 1 category elements
+2026-07-20 17:09:46 | INFO     | crawlers.menu_crawler:crawl_level_1:206 - Extracted 26 valid level 1 categories
+2026-07-20 17:09:46 | INFO     | crawlers.menu_crawler:crawl_level_2_3:221 - Starting level 2/3 crawl for 26 level 1 categories
+2026-07-20 17:11:24 | INFO     | crawlers.menu_crawler:crawl:388 - Menu crawl completed. Total categories: 1270
+2026-07-20 17:11:24 | INFO     | core.browser:close:143 - Browser cleanup completed
+2026-07-20 17:11:24 | INFO     | crawlers.menu_crawler:close:58 - Menu crawler closed
+2026-07-20 17:11:24 | INFO     | services.category_service:deduplicate_categories:118 - Deduplicating 1270 categories
+2026-07-20 17:11:24 | INFO     | services.category_service:deduplicate_categories:136 - Unique categories: 1270 (removed 0 duplicates)
+2026-07-20 17:11:24 | INFO     | services.category_service:save_categories:59 - Saving 1270 unique categories
+2026-07-20 17:11:24 | INFO     | services.category_service:categories_to_dataframe:26 - Converting 1270 categories to DataFrame
+2026-07-20 17:11:24 | INFO     | services.category_service:categories_to_dataframe:31 - Created DataFrame with shape: (1270, 8)
+2026-07-20 17:11:24 | INFO     | core.storage:export_dataframe:58 - Exported 1270 rows to D:\XX\Downloads\Demo\tiki-comment-crawler-main\outputs\tiki_menu_3_levels.csv
+2026-07-20 17:11:24 | INFO     | services.category_service:save_categories:70 - Categories saved: {'csv': 'D:\\XX\\Downloads\\Demo\\tiki-comment-crawler-main\\outputs\\tiki_menu_3_levels.csv'}
+2026-07-20 17:11:24 | INFO     | pipelines.menu_pipeline:menu_pipeline:35 - Menu pipeline completed. Total categories: 1270
