@@ -1,0 +1,19 @@
+platform,category_id,name,parent_id,level,url
+sendo,dien-thoai,Điện thoại & Tablet,,1,https://www.sendo.vn/dien-thoai
+sendo,dt-smartphone,Smartphone,dien-thoai,2,https://www.sendo.vn/dien-thoai/smartphone
+sendo,dt-phu-kien,Phụ kiện điện thoại,dien-thoai,2,https://www.sendo.vn/dien-thoai/phu-kien
+sendo,laptop,Laptop & Máy tính,,1,https://www.sendo.vn/laptop-may-tinh
+sendo,lt-laptop,Laptop,laptop,2,https://www.sendo.vn/laptop-may-tinh/laptop
+sendo,lt-phu-kien,Phụ kiện máy tính,laptop,2,https://www.sendo.vn/laptop-may-tinh/phu-kien
+sendo,thoi-trang-nam,Thời trang nam,,1,https://www.sendo.vn/thoi-trang-nam
+sendo,tt-nam-ao,Áo nam,thoi-trang-nam,2,https://www.sendo.vn/thoi-trang-nam/ao
+sendo,tt-nam-quan,Quần nam,thoi-trang-nam,2,https://www.sendo.vn/thoi-trang-nam/quan
+sendo,thoi-trang-nu,Thời trang nữ,,1,https://www.sendo.vn/thoi-trang-nu
+sendo,tt-nu-ao,Áo nữ,thoi-trang-nu,2,https://www.sendo.vn/thoi-trang-nu/ao
+sendo,tt-nu-vay,Váy nữ,thoi-trang-nu,2,https://www.sendo.vn/thoi-trang-nu/vay-dam
+sendo,my-pham,Mỹ phẩm & Sắc đẹp,,1,https://www.sendo.vn/my-pham
+sendo,mp-trang-diem,Trang điểm,my-pham,2,https://www.sendo.vn/my-pham/trang-diem
+sendo,mp-cham-soc-da,Chăm sóc da,my-pham,2,https://www.sendo.vn/my-pham/cham-soc-da
+sendo,do-gia-dung,Đồ gia dụng,,1,https://www.sendo.vn/do-gia-dung
+sendo,dg-bep,Đồ dùng nhà bếp,do-gia-dung,2,https://www.sendo.vn/do-gia-dung/nha-bep
+sendo,dg-noi-that,Nội thất,do-gia-dung,2,https://www.sendo.vn/do-gia-dung/noi-that

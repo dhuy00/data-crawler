@@ -1,6 +1,6 @@
 # Plan — Multi-Platform Vietnam E-Commerce Crawler
 
-> Status: **draft** — chưa bắt đầu code. Xem `progress.md` để theo dõi tiến độ thực thi.
+> Status: **completed** (Phase 0–6 đã xong, xem `progress.md` để biết chi tiết và ghi chú thực tế).
 
 ## 1. Bối cảnh & mục tiêu
 
@@ -334,11 +334,11 @@ python main.py \
 
 ## 9. Tiêu chí hoàn thành
 
-- [ ] `python main.py --platform tiki --mode full --category "dien-thoai"` chạy thành công, ra CSV + SQLite + JSONL.
-- [ ] `python main.py --platforms tiki,shopee --mode keyword --keywords "iphone"` chạy thành công.
-- [ ] Thêm được sàn mới chỉ bằng cách tạo thư mục `crawlers/<name>/` + đăng ký trong `platform_registry.py` (không sửa core).
-- [ ] `pytest` pass toàn bộ unit + smoke test.
-- [ ] README.md có hướng dẫn chạy cho từng sàn.
+- [x] `python main.py --platform tiki --mode full --category "dien-thoai"` chạy thành công, ra CSV + SQLite + JSONL.
+- [x] `python main.py --platforms tiki,shopee --mode keyword --keywords "iphone"` chạy thành công (Tiki thật OK; Shopee fallback Playwright khi API gated).
+- [x] Thêm được sàn mới chỉ bằng cách tạo thư mục `crawlers/<name>/` + đăng ký trong `platform_registry.py` (không sửa core).
+- [x] `pytest` pass toàn bộ unit + smoke test (145 passed, 2 skipped network-gated).
+- [x] README.md có hướng dẫn chạy cho từng sàn.
 
 ---
 

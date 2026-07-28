@@ -1,0 +1,19 @@
+platform,category_id,name,parent_id,level,url
+lazada,dien-thoai,Điện thoại & Tablet,,1,https://www.lazada.vn/dien-thoai-di-dong/
+lazada,dt-smartphone,Smartphone,dien-thoai,2,https://www.lazada.vn/dien-thoai-smartphone/
+lazada,dt-phu-kien,Phụ kiện điện thoại,dien-thoai,2,https://www.lazada.vn/phu-kien-dien-thoai/
+lazada,laptop,Laptop & Máy tính,,1,https://www.lazada.vn/may-tinh-laptop/
+lazada,lt-laptop,Laptop,laptop,2,https://www.lazada.vn/laptop/
+lazada,lt-phu-kien,Phụ kiện máy tính,laptop,2,https://www.lazada.vn/phu-kien-may-tinh/
+lazada,thoi-trang-nam,Thời trang nam,,1,https://www.lazada.vn/thoi-trang-nam/
+lazada,tt-nam-ao,Áo nam,thoi-trang-nam,2,https://www.lazada.vn/ao-nam/
+lazada,tt-nam-quan,Quần nam,thoi-trang-nam,2,https://www.lazada.vn/quan-nam/
+lazada,thoi-trang-nu,Thời trang nữ,,1,https://www.lazada.vn/thoi-trang-nu/
+lazada,tt-nu-ao,Áo nữ,thoi-trang-nu,2,https://www.lazada.vn/ao-nu/
+lazada,tt-nu-dam,Đầm & váy,thoi-trang-nu,2,https://www.lazada.vn/dam-vay/
+lazada,my-pham,Mỹ phẩm & Sắc đẹp,,1,https://www.lazada.vn/my-pham/
+lazada,mp-trang-diem,Trang điểm,my-pham,2,https://www.lazada.vn/trang-diem/
+lazada,mp-cham-soc-da,Chăm sóc da,my-pham,2,https://www.lazada.vn/cham-soc-da/
+lazada,do-gia-dung,Đồ gia dụng,,1,https://www.lazada.vn/do-gia-dung/
+lazada,dg-bep,Đồ dùng nhà bếp,do-gia-dung,2,https://www.lazada.vn/do-dung-nha-bep/
+lazada,dg-noi-that,Nội thất,do-gia-dung,2,https://www.lazada.vn/noi-that/

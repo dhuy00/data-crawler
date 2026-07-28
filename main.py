@@ -15,12 +15,16 @@ from pipelines.comments_from_products_pipeline import run_comments_from_products
 from pipelines.full_pipeline import run_full_pipeline
 from pipelines.keyword_pipeline import run_keyword_pipeline
 from pipelines.menu_pipeline import run_menu_pipeline
+from pipelines.multi_platform_pipeline import run_multi_platform_pipeline
 from pipelines.products_from_menu_pipeline import run_products_from_menu_pipeline
 
 # Importing the crawlers package triggers each crawler module's
 # `@register(...)` decorator, populating the platform registry.
 import crawlers  # noqa: F401
-import crawlers.tiki  # noqa: F401  (Phase 1 ships Tiki; later phases add others)
+import crawlers.tiki  # noqa: F401  (Phase 1)
+import crawlers.shopee  # noqa: F401  (Phase 2)
+import crawlers.lazada  # noqa: F401  (Phase 3)
+import crawlers.sendo  # noqa: F401  (Phase 4)
 
 
 def parse_args() -> argparse.Namespace:
@@ -61,16 +65,37 @@ def parse_args() -> argparse.Namespace:
 
 
 async def _dispatch(args: argparse.Namespace) -> dict:
+    platforms: list[str] | None = None
     if args.platforms:
-        logger.warning(
-            "--platforms is a Phase 5 feature; falling back to first platform only"
-        )
-        platform_value = args.platforms.split(",")[0].strip()
-    else:
-        platform_value = args.platform
-
+        platforms = [p.strip() for p in args.platforms.split(",") if p.strip()]
+        if args.mode not in ("full", "keyword"):
+            logger.warning(
+                f"--platforms + --mode {args.mode!r}: only 'full' and 'keyword' "
+                f"are multi-platform. Running sequentially per platform."
+            )
     mode = args.mode
     out = args.output_dir
+
+    # Multi-platform short-circuit for the two supported modes.
+    if platforms and mode in ("full", "keyword"):
+        kw_list = None
+        if mode == "keyword":
+            if not args.keywords:
+                raise SystemExit("--keywords is required for keyword mode")
+            kw_list = [k.strip() for k in args.keywords.split(",") if k.strip()]
+        return await run_multi_platform_pipeline(
+            platforms=platforms,
+            mode=mode,
+            output_dir=out,
+            fetch_comments=not args.no_comments,
+            limit_products=args.limit,
+            keywords=kw_list,
+            max_products_per_keyword=args.max_products_per_keyword,
+        )
+
+    platform_value = (
+        platforms[0] if platforms else args.platform
+    )
 
     if mode == "menu":
         return await run_menu_pipeline(

@@ -1,0 +1,18 @@
+{"platform":"shopee","category_id":"dien-thoai","name":"Điện thoại & Phụ kiện","parent_id":null,"level":1,"url":"https://shopee.vn/dien-thoai-phu-kien-cat"}
+{"platform":"shopee","category_id":"dt-dien-thoai","name":"Điện thoại thông minh","parent_id":"dien-thoai","level":2,"url":"https://shopee.vn/dien-thoai-cat"}
+{"platform":"shopee","category_id":"dt-phu-kien","name":"Phụ kiện điện thoại","parent_id":"dien-thoai","level":2,"url":"https://shopee.vn/phu-kien-dien-thoai-cat"}
+{"platform":"shopee","category_id":"laptop","name":"Laptop & Máy tính","parent_id":null,"level":1,"url":"https://shopee.vn/may-tinh-laptop-cat"}
+{"platform":"shopee","category_id":"lt-laptop","name":"Laptop","parent_id":"laptop","level":2,"url":"https://shopee.vn/laptop-cat"}
+{"platform":"shopee","category_id":"lt-phu-kien","name":"Phụ kiện máy tính","parent_id":"laptop","level":2,"url":"https://shopee.vn/phu-kien-may-tinh-cat"}
+{"platform":"shopee","category_id":"thoi-trang-nam","name":"Thời trang nam","parent_id":null,"level":1,"url":"https://shopee.vn/thoi-trang-nam-cat"}
+{"platform":"shopee","category_id":"tt-nam-ao","name":"Áo nam","parent_id":"thoi-trang-nam","level":2,"url":"https://shopee.vn/ao-nam-cat"}
+{"platform":"shopee","category_id":"tt-nam-quan","name":"Quần nam","parent_id":"thoi-trang-nam","level":2,"url":"https://shopee.vn/quan-nam-cat"}
+{"platform":"shopee","category_id":"thoi-trang-nu","name":"Thời trang nữ","parent_id":null,"level":1,"url":"https://shopee.vn/thoi-trang-nu-cat"}
+{"platform":"shopee","category_id":"tt-nu-ao","name":"Áo nữ","parent_id":"thoi-trang-nu","level":2,"url":"https://shopee.vn/ao-nu-cat"}
+{"platform":"shopee","category_id":"tt-nu-vay","name":"Váy nữ","parent_id":"thoi-trang-nu","level":2,"url":"https://shopee.vn/vay-nu-cat"}
+{"platform":"shopee","category_id":"my-pham","name":"Mỹ phẩm & Sắc đẹp","parent_id":null,"level":1,"url":"https://shopee.vn/my-pham-cat"}
+{"platform":"shopee","category_id":"mp-trang-diem","name":"Trang điểm","parent_id":"my-pham","level":2,"url":"https://shopee.vn/trang-diem-cat"}
+{"platform":"shopee","category_id":"mp-cham-soc-da","name":"Chăm sóc da","parent_id":"my-pham","level":2,"url":"https://shopee.vn/cham-soc-da-cat"}
+{"platform":"shopee","category_id":"do-gia-dung","name":"Đồ gia dụng","parent_id":null,"level":1,"url":"https://shopee.vn/do-gia-dung-cat"}
+{"platform":"shopee","category_id":"dg-bep","name":"Đồ dùng nhà bếp","parent_id":"do-gia-dung","level":2,"url":"https://shopee.vn/do-dung-nha-bep-cat"}
+{"platform":"shopee","category_id":"dg-noi-that","name":"Nội thất","parent_id":"do-gia-dung","level":2,"url":"https://shopee.vn/noi-that-cat"}

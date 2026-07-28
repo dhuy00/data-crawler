@@ -1,0 +1,19 @@
+{"platform":"tiki","category_id":"1","name":"Đồ Chơi - Mẹ & Bé","parent_id":null,"level":1,"url":"https://tiki.vn/me-va-be"}
+{"platform":"tiki","category_id":"2","name":"Điện Thoại - Máy Tính Bảng","parent_id":null,"level":1,"url":"https://tiki.vn/dien-thoai-may-tinh-bang"}
+{"platform":"tiki","category_id":"3","name":"Laptop - Thiết bị IT","parent_id":null,"level":1,"url":"https://tiki.vn/laptop-may-vi-tinh"}
+{"platform":"tiki","category_id":"4","name":"Thời trang nam","parent_id":null,"level":1,"url":"https://tiki.vn/thoi-trang-nam"}
+{"platform":"tiki","category_id":"5","name":"Thời trang nữ","parent_id":null,"level":1,"url":"https://tiki.vn/thoi-trang-nu"}
+{"platform":"tiki","category_id":"6","name":"Mỹ phẩm - Làm đẹp","parent_id":null,"level":1,"url":"https://tiki.vn/my-pham-lam-dep"}
+{"platform":"tiki","category_id":"7","name":"Đồ gia dụng","parent_id":null,"level":1,"url":"https://tiki.vn/do-gia-dung"}
+{"platform":"tiki","category_id":"8","name":"Nhà sách - Tiki Books","parent_id":null,"level":1,"url":"https://tiki.vn/nha-sach-tiki"}
+{"platform":"tiki","category_id":"100","name":"Điện thoại Smartphone","parent_id":"2","level":2,"url":"https://tiki.vn/dien-thoai-smartphone"}
+{"platform":"tiki","category_id":"101","name":"Máy tính bảng","parent_id":"2","level":2,"url":"https://tiki.vn/may-tinh-bang"}
+{"platform":"tiki","category_id":"102","name":"Phụ kiện điện thoại","parent_id":"2","level":2,"url":"https://tiki.vn/phu-kien-dien-thoai"}
+{"platform":"tiki","category_id":"200","name":"Laptop","parent_id":"3","level":2,"url":"https://tiki.vn/laptop"}
+{"platform":"tiki","category_id":"201","name":"Laptop Gaming","parent_id":"3","level":2,"url":"https://tiki.vn/laptop-gaming"}
+{"platform":"tiki","category_id":"202","name":"Phụ kiện laptop","parent_id":"3","level":2,"url":"https://tiki.vn/phu-kien-laptop"}
+{"platform":"tiki","category_id":"400","name":"Đầm nữ","parent_id":"5","level":2,"url":"https://tiki.vn/dam"}
+{"platform":"tiki","category_id":"401","name":"Áo nữ","parent_id":"5","level":2,"url":"https://tiki.vn/ao-nu"}
+{"platform":"tiki","category_id":"402","name":"Quần nữ","parent_id":"5","level":2,"url":"https://tiki.vn/quan-nu"}
+{"platform":"tiki","category_id":"700","name":"Đồ dùng nhà bếp","parent_id":"7","level":2,"url":"https://tiki.vn/do-dung-nha-bep"}
+{"platform":"tiki","category_id":"701","name":"Đồ dùng phòng ngủ","parent_id":"7","level":2,"url":"https://tiki.vn/do-dung-phong-ngu"}

@@ -1,0 +1,19 @@
+platform,category_id,name,parent_id,level,url
+shopee,dien-thoai,Điện thoại & Phụ kiện,,1,https://shopee.vn/dien-thoai-phu-kien-cat
+shopee,dt-dien-thoai,Điện thoại thông minh,dien-thoai,2,https://shopee.vn/dien-thoai-cat
+shopee,dt-phu-kien,Phụ kiện điện thoại,dien-thoai,2,https://shopee.vn/phu-kien-dien-thoai-cat
+shopee,laptop,Laptop & Máy tính,,1,https://shopee.vn/may-tinh-laptop-cat
+shopee,lt-laptop,Laptop,laptop,2,https://shopee.vn/laptop-cat
+shopee,lt-phu-kien,Phụ kiện máy tính,laptop,2,https://shopee.vn/phu-kien-may-tinh-cat
+shopee,thoi-trang-nam,Thời trang nam,,1,https://shopee.vn/thoi-trang-nam-cat
+shopee,tt-nam-ao,Áo nam,thoi-trang-nam,2,https://shopee.vn/ao-nam-cat
+shopee,tt-nam-quan,Quần nam,thoi-trang-nam,2,https://shopee.vn/quan-nam-cat
+shopee,thoi-trang-nu,Thời trang nữ,,1,https://shopee.vn/thoi-trang-nu-cat
+shopee,tt-nu-ao,Áo nữ,thoi-trang-nu,2,https://shopee.vn/ao-nu-cat
+shopee,tt-nu-vay,Váy nữ,thoi-trang-nu,2,https://shopee.vn/vay-nu-cat
+shopee,my-pham,Mỹ phẩm & Sắc đẹp,,1,https://shopee.vn/my-pham-cat
+shopee,mp-trang-diem,Trang điểm,my-pham,2,https://shopee.vn/trang-diem-cat
+shopee,mp-cham-soc-da,Chăm sóc da,my-pham,2,https://shopee.vn/cham-soc-da-cat
+shopee,do-gia-dung,Đồ gia dụng,,1,https://shopee.vn/do-gia-dung-cat
+shopee,dg-bep,Đồ dùng nhà bếp,do-gia-dung,2,https://shopee.vn/do-dung-nha-bep-cat
+shopee,dg-noi-that,Nội thất,do-gia-dung,2,https://shopee.vn/noi-that-cat
