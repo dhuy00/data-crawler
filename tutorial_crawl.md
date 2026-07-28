@@ -150,6 +150,82 @@ Get-Content outputs/tiki_keyword_*/raw/keyword_iphone_top_*.jsonl -TotalCount 3
 
 ---
 
+## 6.5. Pipeline đặc biệt — `category_reviews` (3 file CSV mỗi category)
+
+Pipeline tiêu chuẩn (mục 3–4) ghi **mỗi entity 1 file**: 1 file products, 1 file comments/1 SP, 1 file menu. Có 1 case riêng cần **mỗi category 1 file CSV gộp product + review wide-row**: đó là `category_reviews_pipeline`.
+
+### Khi nào dùng
+
+Khi bạn cần xuất bảng phẳng kiểu `sample.csv` — mỗi hàng là 1 review, mỗi hàng đầy đủ thông tin product + review + category tree. Phù hợp để import Excel/Power BI/Tableau.
+
+### Cách chạy
+
+```powershell
+# Mặc định: 3 L1 đầu, 5 SP/category, 20 reviews/SP, output `outputs/cat_reviews/`
+.venv\Scripts\python.exe -m pipelines.category_reviews_pipeline --platform tiki
+
+# Chỉ định categories cụ thể (id từ menu seed) + số SP/category
+.venv\Scripts/ python.exe -m pipelines.category_reviews_pipeline --platform tiki --category-ids 2,3,4 --max-products-per-category 3 --output-dir outputs/cat_reviews
+```
+
+### Flow
+
+1. `crawler.fetch_menu(level=3)` → 19 categories (seed Tiki).
+2. Lọc 3 categories (mặc định 3 L1 đầu; hoặc theo `--category-ids`).
+3. Với mỗi category, gọi `crawler.search(category_name)` → parse `__NEXT_DATA__` lấy raw product dicts (giữ `seller_id`, `brand`, ...).
+4. Với mỗi product, gọi `crawler.fetch_reviews_wide()` → gọi `GET /api/v2/reviews?product_id={pid}` trực tiếp → parse JSON.
+5. Join product + review + category vào **1 dict wide** rồi append row vào CSV.
+
+### Output schema (42 cột)
+
+```
+1-12   Product:      product_id, seller_product_id, product_name, product_url,
+                     product_price, product_original_price, product_rating_average,
+                     product_review_count, product_sold_count, product_thumbnail_url,
+                     product_brand, product_categories_id
+13-20  Category tree: category_id, category_url, category_name, category_level,
+                     category_parent_id, lv1_name, lv2_name, lv3_name
+21-22  Seller:       seller_id, seller_name
+23-40  Review:       comment_id, comment_page, comment_position, customer_id,
+                     customer_name, customer_full_name, customer_region,
+                     customer_avatar_url, rating, title, content, thank_count,
+                     score, status, is_photo, created_at, created_at_text,
+                     purchased_at
+41-42  Metadata:     platform, crawled_at
+```
+
+### Output files
+
+```
+outputs/cat_reviews/
+├── tiki_2_reviews_<run_id>.csv    # ~44 rows × 42 cols (Điện Thoại)
+├── tiki_3_reviews_<run_id>.csv    # ~6 rows × 42 cols  (Laptop)
+├── tiki_4_reviews_<run_id>.csv    # ~17 rows × 42 cols (Thời trang nam)
+└── raw/
+    ├── tiki_2_reviews_<run_id>.jsonl
+    ├── tiki_3_reviews_<run_id>.jsonl
+    └── tiki_4_reviews_<run_id>.jsonl
+```
+
+Mỗi product có thể không có review (API Tiki trả `reviews_count=0` cho vài SP) — khi đó pipeline vẫn ghi 1 placeholder row chỉ chứa thông tin product (các cột review = null) để file không rỗng.
+
+### Code liên quan
+
+| File | Vai trò |
+|---|---|
+| `pipelines/category_reviews_pipeline.py` | Pipeline end-to-end 3 categories. |
+| `crawlers/tiki/comment_parser.py` | `parse_reviews_api()` — flatten `/api/v2/reviews` JSON. |
+| `crawlers/tiki/tiki_crawler.py` | `fetch_reviews_wide()` — gọi API + fallback HTML. |
+| `crawlers/tiki/product_parser.py` | `raw_extract_product_wide()` — flatten product dict. |
+
+### Caveats
+
+- **Cột `category_url`**: là URL L1 (`me-va-be`, `dien-thoai-may-tinh-bang`...) vì pipeline chọn categories ở L1.
+- **`created_at` ISO, `created_at_text` trống**: Tiki API trả epoch seconds, không có human-readable string. Nếu cần `created_at_text`, phải parse từ HTML chi tiết.
+- **Laptop (id=3) ít rows**: nhiều SP search "Laptop" trả `reviews_count=0` từ API → placeholder row only.
+
+---
+
 ## 7. Thêm sàn mới (plugin)
 
 Mục tiêu: thêm `tiktokshop` (hay bất kỳ sàn nào) mà không sửa core. Làm theo 6 bước:

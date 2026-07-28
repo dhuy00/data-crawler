@@ -100,6 +100,63 @@ def _product_from_dict(d: dict) -> Product | None:
     )
 
 
+# -------------------------------------------------- wide product flattening
+
+# When the parent product page was fetched via `fetch_products` we may also
+# have access to a `master_id`/`seller` block inside the product dict. The
+# raw_extract_product_wide() helper flattens all product-level fields we
+# might need for the wide review CSV (mirrors sample.csv columns).
+
+
+def _str_or_none(x) -> str | None:
+    if x is None:
+        return None
+    s = str(x).strip()
+    return s or None
+
+
+def raw_extract_product_wide(d: dict) -> dict:
+    """Return a flat dict with every Tiki product field useful for the
+    wide review export.
+    """
+    if not isinstance(d, dict):
+        d = {}
+    spid = d.get("id") or d.get("product_id")
+    return {
+        "product_id": _str_or_none(spid),
+        "seller_product_id": _str_or_none(
+            d.get("seller_product_id") or d.get("current_seller_product_id")
+        ),
+        "product_name": _str_or_none(d.get("name") or d.get("title")),
+        "product_url": _str_or_none(d.get("url_path") or d.get("url") or d.get("short_url")),
+        "product_price": _coerce_float(d.get("price")),
+        "product_original_price": _coerce_float(
+            d.get("original_price") or d.get("list_price")
+        ),
+        "product_review_count": _coerce_int(
+            d.get("review_count") or d.get("review")
+        ),
+        "product_rating_average": _coerce_float(
+            d.get("rating_average") or d.get("rating")
+        ),
+        "product_sold_count": _coerce_int(
+            d.get("all_time_quantity_sold") or d.get("quantity_sold")
+        ),
+        "product_thumbnail_url": _str_or_none(
+            d.get("thumbnail_url") or d.get("image_url") or d.get("image")
+        ),
+        "product_brand": _str_or_none(d.get("brand_name") or d.get("brand")),
+        "product_categories_id": _str_or_none(d.get("category_id")),
+        "seller_id": _str_or_none(
+            d.get("current_seller_id") or d.get("seller_id") or d.get("shop_id")
+        ),
+        "seller_name": _str_or_none(
+            d.get("seller_name") or d.get("shop_name")
+        ),
+        "seller_store_url": _str_or_none(d.get("seller_store_url")),
+    }
+
+
 def _collect_product_dicts(blob: dict) -> list[dict]:
     """Walk the next-data blob and return all dicts that look like products."""
     found: list[dict] = []

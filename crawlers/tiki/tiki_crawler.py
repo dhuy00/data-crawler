@@ -21,7 +21,7 @@ from crawlers.base import BaseCrawler
 from models import Category, Comment, Platform, Product
 from services.platform_registry import register
 
-from .comment_parser import parse_comments_html
+from .comment_parser import parse_comments_html, parse_reviews_api, parse_reviews_wide
 from .keyword_parser import parse_search_html
 from .menu_parser import parse_menu_html, parse_seed
 from .menu_seed import TIKI_MENU_SEED
@@ -87,6 +87,21 @@ class TikiCrawler(BaseCrawler):
         html = self._get_html(url)
         return parse_products_html(html)
 
+    async def fetch_category_html(self, category_url: str, page: int = 1) -> str:
+        """Raw HTML for a category page (used by the wide per-category pipeline)."""
+        url = category_url
+        if page > 1:
+            sep = "&" if "?" in url else "?"
+            url = f"{url}{sep}page={page}"
+        return self._get_html(url)
+
+    async def fetch_product_html(self, product_id: str, page: int = 1) -> str:
+        """Raw HTML for a product detail page (used by wide review parser)."""
+        url = f"{self.BASE_URL}/p/{product_id}"
+        if page > 1:
+            url = f"{url}?page={page}"
+        return self._get_html(url)
+
     # ------------------------------------------------------ comments
 
     async def fetch_comments(
@@ -100,6 +115,48 @@ class TikiCrawler(BaseCrawler):
             url = f"{url}?page={page}"
         html = self._get_html(url)
         return parse_comments_html(html, product_id=product_id)
+
+    async def fetch_reviews_wide(
+        self,
+        product_id: str,
+        page: int = 1,
+        position_start: int = 1,
+    ) -> list[dict]:
+        """Wide review rows (every Tiki field, ~25+ columns).
+
+        Strategy:
+        1. Try `https://tiki.vn/api/v2/reviews?product_id={pid}&limit=N&page=P`
+           first — returns full review data.
+        2. Fall back to parsing the product detail HTML (legacy path).
+        """
+        api_url = (
+            f"https://tiki.vn/api/v2/reviews"
+            f"?product_id={product_id}&limit=20&page={page}"
+        )
+        try:
+            resp = self.http.get(api_url)
+            if getattr(resp, "status_code", 200) == 200:
+                import json as _json
+                blob = _json.loads(resp.text)
+                rows = parse_reviews_api(
+                    blob,
+                    product_id=product_id,
+                    page_no=page,
+                    position_start=position_start,
+                )
+                if rows:
+                    return rows
+        except Exception as exc:  # noqa: BLE001
+            logger.debug(f"reviews API failed for {product_id}: {exc!r}")
+
+        # Fallback: HTML parse
+        url = f"{self.BASE_URL}/p/{product_id}"
+        if page > 1:
+            url = f"{url}?page={page}"
+        html = self._get_html(url)
+        return parse_reviews_wide(
+            html, product_id=product_id, page_no=page, position_start=position_start
+        )
 
     # ---------------------------------------------------------- search
 

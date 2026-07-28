@@ -36,6 +36,10 @@ logs/
 .env.local
 .env.*.local
 
+# Pipeline outputs (CSV / JSONL / SQLite — generated each run)
+outputs/
+
+
 # Coverage / testing
 .coverage
 .pytest_cache/
