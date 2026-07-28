@@ -165,7 +165,7 @@ Khi bạn cần xuất bảng phẳng kiểu `sample.csv` — mỗi hàng là 1 
 .venv\Scripts\python.exe -m pipelines.category_reviews_pipeline --platform tiki
 
 # Chỉ định categories cụ thể (id từ menu seed) + số SP/category
-.venv\Scripts/ python.exe -m pipelines.category_reviews_pipeline --platform tiki --category-ids 2,3,4 --max-products-per-category 3 --output-dir outputs/cat_reviews
+.venv\Scripts\python.exe -m pipelines.category_reviews_pipeline --platform tiki --category-ids 400 --max-products-per-category 50 --output-dir outputs/cat_reviews
 ```
 
 ### Flow
