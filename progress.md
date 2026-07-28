@@ -244,3 +244,68 @@ Chi tiết xem `test_turtorial.md`.
 - CLI: `--platform` đơn lẻ hoặc `--platforms a,b,c` (chỉ `full`/`keyword`).
 - Output: CSV per-run + SQLite normalized + JSONL raw.
 - Sàn VN rất hay đổi API → mọi crawler có `_get_json` try-API-then-fallback-Playwright. Khi gặp 404, pipeline ghi warning nhưng không crash; tổng `per_platform` vẫn aggregate.
+
+---
+
+## Phase 6 — Per-category wide review pipeline (Tiki)
+
+### Mục tiêu
+Xuất bảng CSV rộng mỗi hàng 1 review, gộp product + review + category tree (~42 cột) khớp `sample.csv`. Mỗi category 1 file CSV riêng.
+
+### Động lực
+Các pipeline hiện có (`menu` / `products_from_menu` / `comments_from_products` / `keyword` / `full`) đều ghi mỗi entity 1 file riêng → người dùng muốn bảng phẳng kiểu `sample.csv` (1 row/review, đầy đủ wide fields) phải tự JOIN ngoài.
+
+### Code
+- `crawlers/tiki/comment_parser.py`
+  - `parse_reviews_api()` — flatten `/api/v2/reviews` JSON. Map field id→comment_id, created_by.{id,name,full_name,region,avatar_url,purchased_at} → customer_*, spid→seller_product_id, seller.{id,name} → seller_id/seller_name, created_at epoch→ISO.
+  - `_flatten_review_from_api()`, `_epoch_to_iso()`.
+- `crawlers/tiki/product_parser.py`
+  - `raw_extract_product_wide()` — flatten product dict, giữ seller_id/brand/current_seller_id/thumbnail_url (mất khi qua `Product` chuẩn).
+- `crawlers/tiki/tiki_crawler.py`
+  - `fetch_category_html()` — raw HTML cho category listing.
+  - `fetch_product_html()` — raw HTML cho product detail.
+  - `fetch_reviews_wide()` — **API-first**: gọi `GET https://tiki.vn/api/v2/reviews?product_id={pid}&limit=20&page=N`. Nếu 200 → `parse_reviews_api()`. Fallback HTML nếu API fail.
+- `pipelines/category_reviews_pipeline.py` (MỚI, 366 dòng)
+  - Flow: `fetch_menu(level=3)` → lọc 3 categories (mặc định 3 L1 đầu hoặc theo `--category-ids`) → với mỗi cat: `_gather_products_for_category()` (gọi `_get_html("/search?q={cat_name}")`, parse `__NEXT_DATA__`, walk tìm product dicts) → với mỗi product: `fetch_reviews_wide()` → join vào wide row → `pd.DataFrame.to_csv()`.
+  - 42 cột: 12 product + 8 category tree + 2 seller + 18 review + 2 metadata.
+  - CLI: `--platform`, `--category-ids`, `--max-products-per-category`, `--output-dir`.
+  - Placeholder row khi SP không có review (API `reviews_count=0`) để file không rỗng.
+
+### Smoke test thực tế
+3 L1 đầu seed (Đồ Chơi Mẹ Bé, Điện Thoại, Laptop):
+```
+outputs/cat_reviews/
+├── tiki_2_reviews_<run>.csv   44 rows × 42 cols  (Điện Thoại)
+├── tiki_3_reviews_<run>.csv    6 rows × 42 cols  (Laptop, nhiều SP reviews_count=0)
+└── tiki_4_reviews_<run>.csv   17 rows × 42 cols  (Thời trang nam — manual run)
+```
++ JSONL tương ứng ở `raw/`.
+
+### Tích hợp sample.csv
+Schema wide row match ~95% sample.csv gốc. Field khác biệt nhỏ:
+- `created_at_text`: API Tiki trả epoch, không có human-readable string → cột này luôn null. Có thể fill bằng HTML parse chi tiết nếu cần.
+- `lv3_name`: seed Tiki chỉ có 19 categories L1+L2 → cột null với L1.
+- `category_url`: lưu URL L1 (URL chính của category), không phải sub-path.
+
+### Tutorial update
+`tutorial_crawl.md` section 6.5 — bổ sung cách chạy, flow, schema, output, code liên quan, caveats.
+
+### Git hygiene
+`outputs/` đã thêm vào `.gitignore` (commit `faff0c0`) và untrack toàn bộ file cũ khỏi git history (commit `66f0625`). Lần chạy pipeline tiếp theo không còn commit nhầm CSV/JSONL.
+
+### Tests
+145 passed, 2 skipped — không thay đổi (parser mới không có unit test riêng, chỉ smoke test thực tế).
+
+### Còn lại (chưa làm trong phase này)
+- **Multi-platform**: pipeline hiện chỉ chạy 1 sàn (Tiki). 3 sàn Shopee/Lazada/Sendo cần Playwright fallback mới lấy được reviews thật (đã plan ở discussion).
+- **Pagination**: chỉ page 1. Sample.csv có review ở page 2-3 cũng đã sinh — cần `max_pages` param.
+- **Filter rating/sort**: API Tiki hỗ trợ `&sort=score|desc` và `&stars=5` — chưa expose qua CLI.
+
+---
+
+## Tổng kết Phase 6 (2026-07-28)
+
+- Thêm pipeline `category_reviews` sinh CSV rộng (42 cột) mỗi category — dùng để import Excel/Power BI dễ dàng.
+- Mở rộng Tiki parser: thêm 2 entry point (`parse_reviews_api`, `raw_extract_product_wide`) phục vụ wide-row export.
+- Đường gom API `/api/v2/reviews` thay vì parse HTML `__NEXT_DATA__` (cách cũ trả 0 reviews vì review là JS-rendered).
+- Tutorial + progress + gitignore đồng bộ. Sẵn sàng mở rộng 3 sàn còn lại khi Playwright fallback được enable.
